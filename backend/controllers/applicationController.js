@@ -1,27 +1,32 @@
-const express = require('express');
-const Application = require('../models/applicationModel');
+import { ApiError } from "../utils/ApiError.js"
+
+const Application = require('../models/application.models.js')
+import express from 'express'
 
 
-
-//@desc Get application 
+//@desc Get application
 //@route GET /api/application/:id
 //@access public
-const getApplication = async (req, res) =>{
-    try{
+const getApplication = async (req, res) => {
+    try {
         const app = await Application.findById(req.params.id);
-        if (!app) return res.status(404).json({error: 'application not found'});
+        if (!app){
+            throw new ApiError(404, 'application not found')
+        }
         res.json(app);
-    }catch(err){
-        res.status(500).json({error: `Error retrieving application`, details: err.message});
+    }
+    catch (err) {
+        throw new ApiError(500, err?.message || 'Error retrieving application')
+        // res.status(500).json({ error: `Error retrieving application`, details: err.message });
     }
 };
 
 //@desc Create application 
 //@route POST /api/application
 //@access public
-const createApplication = async (req, res) =>{
-    try{
-        const {userId, applicationType} = req.body;
+const createApplication = async (req, res) => {
+    try {
+        const { userId, applicationType } = req.body;
 
         const newApp = new Application({
             userId,
@@ -30,27 +35,27 @@ const createApplication = async (req, res) =>{
         });
         const savedApp = await newApp.save();
         res.status(201).json(savedApp);
-    }catch (err) {
-    res.status(500).json({ error: 'Failed to create application', details: err.message });
-  }
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to create application', details: err.message });
+    }
 };
 
 //@desc Update application 
 //@route PUT /api/application/:id
 //@access public
-const updateApplication = async (req, res) =>{
-    try{
+const updateApplication = async (req, res) => {
+    try {
         const updatedApp = await Application.findByIdAndUpdate(
             req.params.id,
             req.body,
-            {new: true}
+            { new: true }
         );
         res.json(updatedApp);
-    }catch(err){
+    } catch (err) {
         res.status(500).json({
             error: 'failed to update application', details: err.message
         });
     }
 };
 
-module.exports = {getApplication, createApplication, updateApplication}
+module.exports = { getApplication, createApplication, updateApplication }

@@ -1,3 +1,1 @@
-exports.constants = {
-    
-}
+export const DB_NAME = "aeodb"

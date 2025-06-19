@@ -1,8 +1,9 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from 'express'
+
+const router = Router();
 
 router.route("/").get((req, res) => {
     res.status(200).json({message: "annexures"});
 });
 
-module.exports = router;
+export default router
