@@ -49,3 +49,5 @@ const loginUser = asyncHandler(async (req, res) => {
     res.status(response.statusCode).json(response)
 
 })
+
+export { loginUser }
