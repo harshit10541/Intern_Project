@@ -15,7 +15,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon backend/inserverdex.js"
+    "dev": "nodemon backend/server.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
