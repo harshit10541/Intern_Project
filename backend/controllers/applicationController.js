@@ -1,12 +1,12 @@
 const express = require('express');
 const Application = require('../models/applicationModel');
-
+const asyncHandler = require("express-async-handler");
 
 
 //@desc Get application 
 //@route GET /api/application/:id
 //@access public
-const getApplication = async (req, res) =>{
+const getApplication = asyncHandler(async (req, res) =>{
     try{
         const app = await Application.findById(req.params.id);
         if (!app) return res.status(404).json({error: 'application not found'});
@@ -14,12 +14,12 @@ const getApplication = async (req, res) =>{
     }catch(err){
         res.status(500).json({error: `Error retrieving application`, details: err.message});
     }
-};
+});
 
 //@desc Create application 
 //@route POST /api/application
 //@access public
-const createApplication = async (req, res) =>{
+const createApplication = asyncHandler(async (req, res) =>{
     try{
         const {userId, applicationType} = req.body;
 
@@ -33,12 +33,12 @@ const createApplication = async (req, res) =>{
     }catch (err) {
     res.status(500).json({ error: 'Failed to create application', details: err.message });
   }
-};
+});
 
 //@desc Update application 
 //@route PUT /api/application/:id
 //@access public
-const updateApplication = async (req, res) =>{
+const updateApplication = asyncHandler(async (req, res) =>{
     try{
         const updatedApp = await Application.findByIdAndUpdate(
             req.params.id,
@@ -51,6 +51,6 @@ const updateApplication = async (req, res) =>{
             error: 'failed to update application', details: err.message
         });
     }
-};
+});
 
 module.exports = {getApplication, createApplication, updateApplication}
