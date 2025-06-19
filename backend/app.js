@@ -1,9 +1,9 @@
 import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
-import { errorHandler } from "./middleware/errorHandler"
+import { errorHandler } from "./middleware/errorHandler.js"
 
-const app = express();
+const app = express()
 
 //Middleware
 app.use(cors({
@@ -13,13 +13,17 @@ app.use(cors({
 app.use(express.json());
 app.use(errorHandler);  // middleware
 
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
 
-//Routes
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/annexures', annexuresRoutes);
+app.use('/api/v1/applications', applicationsRoutes);
+
+
+//Routes import and all defined in one place and main route in this to make it more modular
 import userRoutes from './routes/user.routes.js'
+// routes declaration (we use this to use the middleware)
 
-app.use('/', userRoutes)
+app.use('/api/v1/users', userRoutes)
 
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/annexures', require('./routes/annexures'));
-// app.use('/api/applications', require('./routes/applications'));
+export { app }
