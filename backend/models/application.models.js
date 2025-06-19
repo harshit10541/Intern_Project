@@ -28,8 +28,6 @@ const applicationSchema = new Schema({
 		ref: 'Annexure',
 		default: {},
 	},
-},
-	{ timestamps: true }
-);
+}, { timestamps: true });
 
-module.exports = mongoose.model('Application', applicationSchema);
+export const Application = mongoose.model('Application', applicationSchema);
