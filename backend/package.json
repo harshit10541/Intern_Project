@@ -4,12 +4,12 @@
   "description": "express project",
   "license": "MIT",
   "author": "Harshit Bhandari",
-  "type": "commonjs",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules backend/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
