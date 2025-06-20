@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import { loginUser } from '../controllers/user.controllers.js'
-import annexuresRoutes from '../annexures.routes.js'
-import applicationsRoutes from '../applications.routes.js'
-import authRoutes from '../auth.routes.js'
+import annexuresRoutes from './annexures.routes.js'
+import applicationsRoutes from './applications.routes.js'
+import authRoutes from './auth.routes.js'
 
 const router = Router()
 
