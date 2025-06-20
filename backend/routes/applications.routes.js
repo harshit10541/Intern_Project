@@ -1,20 +1,13 @@
-import express, { Router } from 'express'
-
+import { Router } from 'express'
 import {
     getApplication,
     createApplication,
     updateApplication
-} from "../controllers/applicationController"
+} from '../controllers/applicationController.js'
 
 const router = Router()
 
-//create a new application
-router.route('/').post(createApplication);
+router.route('/').post(createApplication)
+router.route('/:id').get(getApplication).put(updateApplication)
 
-//Get an application by ID
-router.route('/:id').get(getApplication)
-    //update an application
-    .put(updateApplication);
-
-
-export { router }
+export default router

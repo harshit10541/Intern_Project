@@ -1,6 +1,5 @@
 import { ApiError } from "../utils/ApiError.js"
-
-const Application = require('../models/application.models.js')
+import {Application} from '../models/application.model.js';
 import express from 'express'
 
 
@@ -58,4 +57,4 @@ const updateApplication = async (req, res) => {
     }
 };
 
-module.exports = { getApplication, createApplication, updateApplication }
+export { getApplication, createApplication, updateApplication }

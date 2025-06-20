@@ -14,15 +14,16 @@ app.use(express.json());
 app.use(errorHandler);  // middleware
 
 // const port = process.env.PORT || 5000;
+//Routes import and all defined in one place and main route in this to make it more modular
+// routes declaration (we use this to use the middleware)
+
+import userRoutes from './routes/user.routes.js'
+import annexuresRoutes from './routes/annexures.routes.js'
+import applicationsRoutes from './routes/applications.routes.js'
 
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/annexures', annexuresRoutes);
 app.use('/api/v1/applications', applicationsRoutes);
-
-
-//Routes import and all defined in one place and main route in this to make it more modular
-import userRoutes from './routes/user.routes.js'
-// routes declaration (we use this to use the middleware)
 
 app.use('/api/v1/users', userRoutes)
 
