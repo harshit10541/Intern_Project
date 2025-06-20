@@ -18,7 +18,7 @@ const getApplication = async (req, res) => {
         throw new ApiError(500, err?.message || 'Error retrieving application')
         // res.status(500).json({ error: `Error retrieving application`, details: err.message });
     }
-});
+};
 
 //@desc Create application 
 //@route POST /api/application
@@ -55,6 +55,6 @@ const updateApplication = async (req, res) => {
             error: 'failed to update application', details: err.message
         });
     }
-});
+};
 
 export { getApplication, createApplication, updateApplication }
