@@ -8,6 +8,8 @@ const router = Router()
 
 console.log("User routes mounted at /api/v1/users")
 
+// route
+
 router.route("/login").post(loginUser)
 
 router.use('/api/auth', authRoutes);
