@@ -1,27 +1,17 @@
-const express = require("express");
-const cors = require('cors');
-const errorHandler = require("./middleware/errorHandler");
-const connectDb = require("./config/db");
-const dotenv = require("dotenv").config();
-connectDb();
-const app = express();
+import dotenv from 'dotenv'
+import connectDB from './db/index.db.js'
 
-//Middleware
-app.use(cors());
-app.use(express.json());
-app.use(errorHandler);
+import { app } from './app.js'
 
+dotenv.config()
 
-const port = process.env.PORT || 5000;
+connectDB()
 
-//Routes
-app.use('/api/auth', require('./routes/auth'));
-
-app.use('/api/annexures', require('./routes/annexures'));
-
-app.use('/api/applications', require('./routes/applications'));
-
-
-app.listen(port, (req, res) =>{
-    console.log(`server on ${port}`);
-});
+    .then(() => {
+        app.listen(process.env.PORT || 8000, () => {
+            console.log(`✅ Server is running at port : ${process.env.PORT}`)
+        })
+    })
+    .catch((error) => {
+        console.log("❌ MONGO db connection failed !!!", error)
+    })
