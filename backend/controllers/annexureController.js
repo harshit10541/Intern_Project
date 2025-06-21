@@ -15,20 +15,23 @@ const models = {
 
 const createAnnexure = async (req, res) =>{
     try{
+        // res.json({[req.params.type.toLowerCase()]: "get all"});
         const type = req.params.type.toLowerCase();
         const Model = models[type];
         
-        if (!Model) return res.status(400).json({error: 'Invalid annexure type.'});
+        // if (!Model) return res.status(400).json({error: 'Invalid annexure type.'});
 
-        const exists = await Model.findOne({
-            applicationId: req.body.applicationId,
-            userId: req.user.id,
+        // const exists = await Model.findOne({
+        //     applicationId: req.body.applicationId,
+        //     userId: req.user.id,
 
-        });
+        // });
 
-        if (exists) return res.status(409).json({error: 'Annexure already exists. Use PUT to update'});
+        // if (exists) return res.status(409).json({error: 'Annexure already exists. Use PUT to update'});
 
-        const annexure = new Model({...req.body, userId: req.user.id});
+        // const annexure = new Model({...req.body, userId: req.user.id});
+
+        const annexure = new Model({...req.body});
         await annexure.save();
 
         res.status(201).json(annexure);

@@ -5,13 +5,13 @@ const AnnexureASchema = new Schema({
   applicationId: {
     type: Schema.Types.ObjectId,
     ref: 'Application',
-    required: true,
+    // required: true,
   },
 
   userId: {
     type: Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    // required: true,
   },
 
   applicationType: {
