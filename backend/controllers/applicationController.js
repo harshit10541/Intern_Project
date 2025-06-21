@@ -57,4 +57,4 @@ const updateApplication = async (req, res) => {
     }
 };
 
-export { getApplication, createApplication, updateApplication }
+export { getApplication, createApplication, updateApplication };
