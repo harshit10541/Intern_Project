@@ -1,7 +1,3 @@
-
-// import annexureAModel from '../models/annexureA.model.js';
-// import annexureBModel from '../models/annexureB.model.js';
-// import annexureCModel from '../models/annexureC.model.js';
 import { annexureAModel} from '../models/annexureA.model.js';
 import { annexureBModel } from '../models/annexureB.model.js';
 import { annexureCModel } from '../models/annexureC.model.js';
@@ -45,7 +41,9 @@ const updateAnnexure = async (req, res) => {
     const type = req.params.type.toLowerCase();
     const Model = models[type];
 
-    if (!Model) return res.status(400).json({ error: 'Invalid annexure type.' });
+    if (!Model){
+      return res.status(400).json({ error: 'Invalid annexure type.' })
+    }
 
     const updated = await Model.findOneAndUpdate(
       { applicationId: req.body.applicationId, userId: req.user.id },
@@ -53,7 +51,9 @@ const updateAnnexure = async (req, res) => {
       { new: true, runValidators: true }
     );
 
-    if (!updated) return res.status(404).json({ error: 'Annexure not found.' });
+    if (!updated){
+      return res.status(404).json({ error: 'Annexure not found.' })
+    }
 
     res.status(200).json(updated);
   } catch (err) {
