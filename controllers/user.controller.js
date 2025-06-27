@@ -21,19 +21,19 @@ const generateAccessAndRefreshTokens = async (userId) => {
     }
 }
 
-
+// || !confirm_password
 const registerUser = asyncHandler(async (req, res) => {
     // get user details from frontend
-    const { fullname, email, password, confirm_password, mobile_number, company_name } = req.body
+    const { fullname, email, password, mobile_number, company_name } = req.body
 
 
     // validation - not empty
-    if (!fullname || !email || !password || !confirm_password) {
+    if (!fullname || !email || !password) {
         throw new ApiError(400, 'All required fields must be filled')
     }
-    if (password !== confirm_password) {
-        throw new ApiError(400, "Passwords do not match")
-    }
+    // if (password !== confirm_password) {
+    //     throw new ApiError(400, "Passwords do not match")
+    // }
 
     // check if user already exists: username or email
     if (await User.exists({ email })) {
