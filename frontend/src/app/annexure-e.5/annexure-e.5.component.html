@@ -1,0 +1,1544 @@
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">SELF-ASSESSMENT FORM</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200  rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Annexure - E.5</h2>
+      <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Safety and Security</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T2, AEO-T3 and AEO-LO)</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <p class="text-center text-gray-500 mb-8">Note: The applicant should enclose appropriate documentary evidences in
+        support of their claims under this section</p>
+      <div class="bg-gray-100 rounded-t p-2 text-center ">
+        <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.1 Procedural Security
+        </h2>
+
+      </div>
+      <!-- E.5.1 Section -->
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left"></th>
+              <th class="p-2 border border-gray-300 text-left">Compliance</th>
+              <th class="p-2 border border-gray-300 text-center">Yes</th>
+              <th class="p-2 border border-gray-300 text-center">No</th>
+              <th class="p-2 border border-gray-300 text-left">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">a)</td>
+              <td class="p-2 border border-gray-300">
+                i. Whether there is a security policy and procedure manual which contains detailed guidelines
+                on procedures to be followed to preserve the integrity of the cargo while in its custody,
+                loading and unloading from transport conveyance and during transport?
+                <br />
+                ii. Whether there is any laid down procedures and manual which stipulates how seals are to be
+                controlled and affixed to cargo and transport conveyances?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-a-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-a-yes" name="e51-a" value="yes" aria-label="Yes for question E5.1-A"
+                  [(ngModel)]="formDataE51.a" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-a-no" class="sr-only">No</label>
+                <input type="radio" id="e51-a-no" name="e51-a" value="no" aria-label="No for question E5.1-A"
+                  [(ngModel)]="formDataE51.a" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-a" class="sr-only">Remarks for question E5.1-A</label>
+                <input type="text" id="e51-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-A" [(ngModel)]="formDataE51.remarksA" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">b)</td>
+              <td class="p-2 border border-gray-300">
+                Whether security measures are in place to ensure the integrity and security ofprocesses
+                relevant to the transportation, handling, and storage of cargo inthe supply chai
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-b-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-b-yes" name="e51-b" value="yes" aria-label="Yes for question E5.1-B"
+                  [(ngModel)]="formDataE51.b" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-b-no" class="sr-only">No</label>
+                <input type="radio" id="e51-b-no" name="e51-b" value="no" aria-label="No for question E5.1-B"
+                  [(ngModel)]="formDataE51.b" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-b" class="sr-only">Remarks for question E5.1-B</label>
+                <input type="text" id="e51-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-B" [(ngModel)]="formDataE51.remarksB" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">c)</td>
+              <td class="p-2 border border-gray-300">
+                Whether there is proper documentation of management procedure in place to ensure that all
+                documentation used in the clearing of cargo is legible, complete, accurate and protected
+                against the exchange, loss of introduction of erroneous information?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-c-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-c-yes" name="e51-c" value="yes" aria-label="Yes for question E5.1-C"
+                  [(ngModel)]="formDataE51.c" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-c-no" class="sr-only">No</label>
+                <input type="radio" id="e51-c-no" name="e51-c" value="no" aria-label="No for question E5.1-C"
+                  [(ngModel)]="formDataE51.c" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-c" class="sr-only">Remarks for question E5.1-C</label>
+                <input type="text" id="e51-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-C" [(ngModel)]="formDataE51.remarksC" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">d)</td>
+              <td class="p-2 border border-gray-300">
+                Whether there is a procedure in place to ensure that information received from business
+                partners is reported accurately and timely as well as declared in the time limit regulated by
+                Customs?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-d-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-d-yes" name="e51-d" value="yes" aria-label="Yes for question E5.1-D"
+                  [(ngModel)]="formDataE51.d" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-d-no" class="sr-only">No</label>
+                <input type="radio" id="e51-d-no" name="e51-d" value="no" aria-label="No for question E5.1-D"
+                  [(ngModel)]="formDataE51.d" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-d" class="sr-only">Remarks for question E5.1-D</label>
+                <input type="text" id="e51-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-D" [(ngModel)]="formDataE51.remarksD" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">e)</td>
+              <td class="p-2 border border-gray-300">
+                Whether procedure are in place to ensure that:
+                <br />
+                a. Import / Export cargo are reconciled against the information on the bill of lading?
+                <br />
+                b. The weights, labels, marks and piece count of the import/export cargo are accurately
+                indicated?
+                <br />
+                c. Import/export cargo are verified against purchase/delivery orders?
+                <br />
+                d. Drivers delivering or receiving cargo are positively identified before cargo is received
+                or released?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-e-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-e-yes" name="e51-e" value="yes" aria-label="Yes for question E5.1-E"
+                  [(ngModel)]="formDataE51.e" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-e-no" class="sr-only">No</label>
+                <input type="radio" id="e51-e-no" name="e51-e" value="no" aria-label="No for question E5.1-E"
+                  [(ngModel)]="formDataE51.e" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-e" class="sr-only">Remarks for question E5.1-E</label>
+                <input type="text" id="e51-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-E" [(ngModel)]="formDataE51.remarksE" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300"></td>
+              <td class="p-2 border border-gray-300">
+                Whether all shortages, overages, and other significant discrepancies or anomalies are resolved
+                and/or investigated appropriately?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-f-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e51-f-yes" name="e51-f" value="yes" aria-label="Yes for question E5.1-F"
+                  [(ngModel)]="formDataE51.f" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e51-f-no" class="sr-only">No</label>
+                <input type="radio" id="e51-f-no" name="e51-f" value="no" aria-label="No for question E5.1-F"
+                  [(ngModel)]="formDataE51.f" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e51-remarks-f" class="sr-only">Remarks for question E5.1-F</label>
+                <input type="text" id="e51-remarks-f" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.1-F" [(ngModel)]="formDataE51.remarksF" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gray-100 rounded-t p-2 text-center ">
+        <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.2 Premises Security
+        </h2>
+      </div>
+      <!-- E.5 Section -->
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left"></th>
+              <th class="p-2 border border-gray-300 text-left">Compliance</th>
+              <th class="p-2 border border-gray-300 text-center">Yes</th>
+              <th class="p-2 border border-gray-300 text-center">No</th>
+              <th class="p-2 border border-gray-300 text-left">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">a)</td>
+              <td class="p-2 border border-gray-300">
+                Whether building is fully secured against unlawful entry?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-a-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-a-yes" name="e52-a" value="yes" aria-label="Yes for question E5.2-A"
+                  [(ngModel)]="formDataE52.a" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-a-no" class="sr-only">No</label>
+                <input type="radio" id="e52-a-no" name="e52-a" value="no" aria-label="No for question E5.2-A"
+                  [(ngModel)]="formDataE52.a" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-a" class="sr-only">Remarks for question E5.2-A</label>
+                <input type="text" id="e52-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-A" [(ngModel)]="formDataE52.remarksA" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">b)</td>
+              <td class="p-2 border border-gray-300">
+                Whether all external and internal gates, fences and windows are fully secured with locking
+                devices or alternative access monitoring or control measures?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-b-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-b-yes" name="e52-b" value="yes" aria-label="Yes for question E5.2-B"
+                  [(ngModel)]="formDataE52.b" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-b-no" class="sr-only">No</label>
+                <input type="radio" id="e52-b-no" name="e52-b" value="no" aria-label="No for question E5.2-B"
+                  [(ngModel)]="formDataE52.b" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-b" class="sr-only">Remarks for question E5.2-B</label>
+                <input type="text" id="e52-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-B" [(ngModel)]="formDataE52.remarksB" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">c)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the issuance of locks and keys is controlled by management or authorised personnel
+                only?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-c-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-c-yes" name="e52-c" value="yes" aria-label="Yes for question E5.2-C"
+                  [(ngModel)]="formDataE52.c" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-c-no" class="sr-only">No</label>
+                <input type="radio" id="e52-c-no" name="e52-c" value="no" aria-label="No for question E5.2-C"
+                  [(ngModel)]="formDataE52.c" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-c" class="sr-only">Remarks for question E5.2-C</label>
+                <input type="text" id="e52-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-C" [(ngModel)]="formDataE52.remarksC" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">d)</td>
+              <td class="p-2 border border-gray-300">
+                Whether adequate internal and external lighting have been provided especially for entrances and
+                exits, cargo handling and storage areas, fence lines and parking areas?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-d-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-d-yes" name="e52-d" value="yes" aria-label="Yes for question E5.2-D"
+                  [(ngModel)]="formDataE52.d" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-d-no" class="sr-only">No</label>
+                <!-- your-component.component.html -->
+                <input type="radio" id="e52-d-no" name="e52-d" value="no" aria-label="No for question E5.2-D"
+                  [(ngModel)]="formDataE52.d" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-d" class="sr-only">Remarks for question E5.2-D</label>
+                <input type="text" id="e52-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-D" [(ngModel)]="formDataE52.remarksD" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">e)</td>
+              <td class="p-2 border border-gray-300">
+                Whether gates through which vehicles and/or personnel enter/exit have been manned, monitored or
+                otherwise controlled?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-e-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-e-yes" name="e52-e" value="yes" aria-label="Yes for question E5.2-E"
+                  [(ngModel)]="formDataE52.e" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-e-no" class="sr-only">No</label>
+                <input type="radio" id="e52-e-no" name="e52-e" value="no" aria-label="No for question E5.2-E"
+                  [(ngModel)]="formDataE52.e" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-e" class="sr-only">Remarks for question E5.2-E</label>
+                <input type="text" id="e52-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-E" [(ngModel)]="formDataE52.remarksE" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">f)</td>
+              <td class="p-2 border border-gray-300">
+                Whether vehicles accessing restricted areas are parked in approved area and their license plate
+                numbers furnished to Customs upon request?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-f-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-f-yes" name="e52-f" value="yes" aria-label="Yes for question E5.2-F"
+                  [(ngModel)]="formDataE52.f" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-f-no" class="sr-only">No</label>
+                <input type="radio" id="e52-f-no" name="e52-f" value="no" aria-label="No for question E5.2-F"
+                  [(ngModel)]="formDataE52.f" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-f" class="sr-only">Remarks for question E5.2-F</label>
+                <input type="text" id="e52-remarks-f" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-F" [(ngModel)]="formDataE52.remarksF" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">g)</td>
+              <td class="p-2 border border-gray-300">
+                Whether only properly identified and authorized persons, vehicles and goods are permitted
+                access?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-g-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-g-yes" name="e52-g" value="yes" aria-label="Yes for question E5.2-G"
+                  [(ngModel)]="formDataE52.g" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-g-no" class="sr-only">No</label>
+                <input type="radio" id="e52-g-no" name="e52-g" value="no" aria-label="No for question E5.2-G"
+                  [(ngModel)]="formDataE52.g" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-g" class="sr-only">Remarks for question E5.2-G</label>
+                <input type="text" id="e52-remarks-g" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-G" [(ngModel)]="formDataE52.remarksG" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">h)</td>
+              <td class="p-2 border border-gray-300">
+                Whether access to document or cargo storage areas is restricted?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-h-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-h-yes" name="e52-h" value="yes" aria-label="Yes for question E5.2-H"
+                  [(ngModel)]="formDataE52.h" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-h-no" class="sr-only">No</label>
+                <input type="radio" id="e52-h-no" name="e52-h" value="no" aria-label="No for question E5.2-H"
+                  [(ngModel)]="formDataE52.h" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-h" class="sr-only">Remarks for question E5.2-H</label>
+                <input type="text" id="e52-remarks-h" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-H" [(ngModel)]="formDataE52.remarksH" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">i)</td>
+              <td class="p-2 border border-gray-300">
+                Whether there are appropriate security systems for access control?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-i-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-i-yes" name="e52-i" value="yes" aria-label="Yes for question E5.2-I"
+                  [(ngModel)]="formDataE52.i" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-i-no" class="sr-only">No</label>
+                <input type="radio" id="e52-i-no" name="e52-i" value="no" aria-label="No for question E5.2-I"
+                  [(ngModel)]="formDataE52.i" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-i" class="sr-only">Remarks for question E5.2-I</label>
+                <input type="text" id="e52-remarks-i" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-I" [(ngModel)]="formDataE52.remarksI" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">j)</td>
+              <td class="p-2 border border-gray-300">
+                Whether restricted areas have been clearly identified?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-j-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-j-yes" name="e52-j" value="yes" aria-label="Yes for question E5.2-J"
+                  [(ngModel)]="formDataE52.j" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-j-no" class="sr-only">No</label>
+                <input type="radio" id="e52-j-no" name="e52-j" value="no" aria-label="No for question E5.2-J"
+                  [(ngModel)]="formDataE52.j" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-j" class="sr-only">Remarks for question E5.2-J</label>
+                <input type="text" id="e52-remarks-j" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-J" [(ngModel)]="formDataE52.remarksJ" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">k)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the integrity of structures and systems is periodically inspected?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-k-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-k-yes" name="e52-k" value="yes" aria-label="Yes for question E5.2-K"
+                  [(ngModel)]="formDataE52.k" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-k-no" class="sr-only">No</label>
+                <input type="radio" id="e52-k-no" name="e52-k" value="no" aria-label="No for question E5.2-K"
+                  [(ngModel)]="formDataE52.k" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-k" class="sr-only">Remarks for question E5.2-K</label>
+                <input type="text" id="e52-remarks-k" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-K" [(ngModel)]="formDataE52.remarksK" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">l)</td>
+              <td class="p-2 border border-gray-300">
+                Whether perimeter fencing exists for enclosing the areas around cargo handling and storage
+                facilities?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-l-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-l-yes" name="e52-l" value="yes" aria-label="Yes for question E5.2-L"
+                  [(ngModel)]="formDataE52.l" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-l-no" class="sr-only">No</label>
+                <input type="radio" id="e52-l-no" name="e52-l" value="no" aria-label="No for question E5.2-L"
+                  [(ngModel)]="formDataE52.l" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-l" class="sr-only">Remarks for question E5.2-L</label>
+                <input type="text" id="e52-remarks-l" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-L" [(ngModel)]="formDataE52.remarksL" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">m)</td>
+              <td class="p-2 border border-gray-300">
+                Whether interior fencing exists within a cargo handling structure to segregate domestic,
+                international, high value and hazardous cargo.
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-m-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-m-yes" name="e52-m" value="yes" aria-label="Yes for question E5.2-M"
+                  [(ngModel)]="formDataE52.m" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-m-no" class="sr-only">No</label>
+                <input type="radio" id="e52-m-no" name="e52-m" value="no" aria-label="No for question E5.2-M"
+                  [(ngModel)]="formDataE52.m" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-m" class="sr-only">Remarks for question E5.2-M</label>
+                <input type="text" id="e52-remarks-m" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-M" [(ngModel)]="formDataE52.remarksM" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">n)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the number of gates is kept to the minimum necessary for proper access and safety?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-n-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-n-yes" name="e52-n" value="yes" aria-label="Yes for question E5.2-N"
+                  [(ngModel)]="formDataE52.n" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-n-no" class="sr-only">No</label>
+                <input type="radio" id="e52-n-no" name="e52-n" value="no" aria-label="No for question E5.2-N"
+                  [(ngModel)]="formDataE52.n" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-n" class="sr-only">Remarks for question E5.2-N</label>
+                <input type="text" id="e52-remarks-n" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-N" [(ngModel)]="formDataE52.remarksN" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">o)</td>
+              <td class="p-2 border border-gray-300">
+                Whether unauthorized vehicles are prohibited from parking in or adjacent to cargo handling and
+                storage areas?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-o-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e52-o-yes" name="e52-o" value="yes" aria-label="Yes for question E5.2-O"
+                  [(ngModel)]="formDataE52.o" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e52-o-no" class="sr-only">No</label>
+                <input type="radio" id="e52-o-no" name="e52-o" value="no" aria-label="No for question E5.2-O"
+                  [(ngModel)]="formDataE52.o" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e52-remarks-o" class="sr-only">Remarks for question E5.2-O</label>
+                <input type="text" id="e52-remarks-o" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.2-O" [(ngModel)]="formDataE52.remarksO" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="bg-gray-100 rounded-t p-2 text-center ">
+        <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.3 Cargo Security
+        </h2>
+      </div>
+      <!-- E.5.3 Section -->
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left"></th>
+              <th class="p-2 border border-gray-300 text-left">Compliance</th>
+              <th class="p-2 border border-gray-300 text-center">Yes</th>
+              <th class="p-2 border border-gray-300 text-center">No</th>
+              <th class="p-2 border border-gray-300 text-left">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">a)</td>
+              <td class="p-2 border border-gray-300">
+                Whether only properly identified and authorized persons have access to the cargo?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-a-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-a-yes" name="e53-a" value="yes" aria-label="Yes for question E5.3-A"
+                  [(ngModel)]="formDataE53.a" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-a-no" class="sr-only">No</label>
+                <input type="radio" id="e53-a-no" name="e53-a" value="no" aria-label="No for question E5.3-A"
+                  [(ngModel)]="formDataE53.a" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-a" class="sr-only">Remarks for question E5.3-A</label>
+                <input type="text" id="e53-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-A" [(ngModel)]="formDataE53.remarksA" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">b)</td>
+              <td class="p-2 border border-gray-300">
+                Whether integrity of cargo is ensured by permanent monitoring or keeping in a safe, locked area?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-b-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-b-yes" name="e53-b" value="yes" aria-label="Yes for question E5.3-B"
+                  [(ngModel)]="formDataE53.b" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-b-no" class="sr-only">No</label>
+                <input type="radio" id="e53-b-no" name="e53-b" value="no" aria-label="No for question E5.3-B"
+                  [(ngModel)]="formDataE53.b" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-b" class="sr-only">Remarks for question E5.3-B</label>
+                <input type="text" id="e53-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-B" [(ngModel)]="formDataE53.remarksB" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">c)</td>
+              <td class="p-2 border border-gray-300">
+                Whether all seals meet the current PAS / ISO 17712 standards for high security seals especially
+                with maritime containerized cargo?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-c-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-c-yes" name="e53-c" value="yes" aria-label="Yes for question E5.3-C"
+                  [(ngModel)]="formDataE53.c" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-c-no" class="sr-only">No</label>
+                <input type="radio" id="e53-c-no" name="e53-c" value="no" aria-label="No for question E5.3-C"
+                  [(ngModel)]="formDataE53.c" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-c" class="sr-only">Remarks for question E5.3-C</label>
+                <input type="text" id="e53-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-C" [(ngModel)]="formDataE53.remarksC" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">d)</td>
+              <td class="p-2 border border-gray-300">
+                In cases of air consignments/courier consignments where it is not possible to procure and use
+                PAS / ISO 17712 seals, whether any international seal compatible with standards of PAS/ISO
+                17712 isbeing used?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-d-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-d-yes" name="e53-d" value="yes" aria-label="Yes for question E5.3-D"
+                  [(ngModel)]="formDataE53.d" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-d-no" class="sr-only">No</label>
+                <input type="radio" id="e53-d-no" name="e53-d" value="no" aria-label="No for question E5.3-D"
+                  [(ngModel)]="formDataE53.d" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-d" class="sr-only">Remarks for question E5.3-D</label>
+                <input type="text" id="e53-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-D" [(ngModel)]="formDataE53.remarksD" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">e)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the integrity of container seals are being checked by the authorized person by
+                following the procedure prescribed in the security policy manual?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-e-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-e-yes" name="e53-e" value="yes" aria-label="Yes for question E5.3-E"
+                  [(ngModel)]="formDataE53.e" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-e-no" class="sr-only">No</label>
+                <input type="radio" id="e53-e-no" name="e53-e" value="no" aria-label="No for question E5.3-E"
+                  [(ngModel)]="formDataE53.e" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-e" class="sr-only">Remarks for question E5.3-E</label>
+                <input type="text" id="e53-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-E" [(ngModel)]="formDataE53.remarksE" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">f)</td>
+              <td class="p-2 border border-gray-300">
+                Whether only authorised personnel distribute container seals and safeguard their appropriate and
+                legitimate use?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-f-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-f-yes" name="e53-f" value="yes" aria-label="Yes for question E5.3-F"
+                  [(ngModel)]="formDataE53.f" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-f-no" class="sr-only">No</label>
+                <input type="radio" id="e53-f-no" name="e53-f" value="no" aria-label="No for question E5.3-F"
+                  [(ngModel)]="formDataE53.f" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-f" class="sr-only">Remarks for question E5.3-F</label>
+                <input type="text" id="e53-remarks-f" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-F" [(ngModel)]="formDataE53.remarksF" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">g)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the seven points inspection process is carried out in respect of containers before
+                stuffing of cargo therein? (These seven points include: Front wall, Left side, Right side,
+                Floor, Ceiling/Roof, Inside/outside doors, Outside/undercarriage.)
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-g-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-g-yes" name="e53-g" value="yes" aria-label="Yes for question E5.3-G"
+                  [(ngModel)]="formDataE53.g" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-g-no" class="sr-only">No</label>
+                <input type="radio" id="e53-g-no" name="e53-g" value="no" aria-label="No for question E5.3-G"
+                  [(ngModel)]="formDataE53.g" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-g" class="sr-only">Remarks for question E5.3-G</label>
+                <input type="text" id="e53-remarks-g" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-G" [(ngModel)]="formDataE53.remarksG" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">h)</td>
+              <td class="p-2 border border-gray-300">
+                Whether is it possible to deliver goods to an unsupervised area?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-h-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-h-yes" name="e53-h" value="yes" aria-label="Yes for question E5.3-H"
+                  [(ngModel)]="formDataE53.h" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-h-no" class="sr-only">No</label>
+                <input type="radio" id="e53-h-no" name="e53-h" value="no" aria-label="No for question E5.3-H"
+                  [(ngModel)]="formDataE53.h" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-h" class="sr-only">Remarks for question E5.3-H</label>
+                <input type="text" id="e53-remarks-h" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-H" [(ngModel)]="formDataE53.remarksH" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">i)</td>
+              <td class="p-2 border border-gray-300">
+                Whether appropriate procedures have been laid down on measures to be taken when an
+                unauthorized access or tampering is discovered?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-i-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-i-yes" name="e53-i" value="yes" aria-label="Yes for question E5.3-H"
+                  [(ngModel)]="formDataE53.h" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-i-no" class="sr-only">No</label>
+                <input type="radio" id="e53-i-no" name="e53-i" value="no" aria-label="No for question E5.3-H"
+                  [(ngModel)]="formDataE53.h" />
+              </td>
+
+
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-i" class="sr-only">Remarks for question E5.3-I</label>
+                <input type="text" id="e53-remarks-i" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-I" [(ngModel)]="formDataE53.remarksI" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">j)</td>
+              <td class="p-2 border border-gray-300">
+                Whether cargo are uniformly marked or stored in designated areas only?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-j-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-j-yes" name="e53-j" value="yes" aria-label="Yes for question E5.3-J"
+                  [(ngModel)]="formDataE53.j" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-j-no" class="sr-only">No</label>
+                <input type="radio" id="e53-j-no" name="e53-j" value="no" aria-label="No for question E5.3-J"
+                  [(ngModel)]="formDataE53.j" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-j" class="sr-only">Remarks for question E5.3-J</label>
+                <input type="text" id="e53-remarks-j" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-J" [(ngModel)]="formDataE53.remarksJ" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">k)</td>
+              <td class="p-2 border border-gray-300">
+                Whether appropriate procedures exist to weigh / tally the goods and compare them against
+                transport documents, purchase/sales orders and Customs papers?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-k-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-k-yes" name="e53-k" value="yes" aria-label="Yes for question E5.3-K"
+                  [(ngModel)]="formDataE53.k" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-k-no" class="sr-only">No</label>
+                <input type="radio" id="e53-k-no" name="e53-k" value="no" aria-label="No for question E5.3-K"
+                  [(ngModel)]="formDataE53.k" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-k" class="sr-only">Remarks for question E5.3-K</label>
+                <input type="text" id="e53-remarks-k" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-K" [(ngModel)]="formDataE53.remarksK" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">l)</td>
+              <td class="p-2 border border-gray-300">
+                Whether internal control procedures exist to deal with situations when any discrepancies
+                and/or irregularities are discovered?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-l-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e53-l-yes" name="e53-l" value="yes" aria-label="Yes for question E5.3-L"
+                  [(ngModel)]="formDataE53.l" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e53-l-no" class="sr-only">No</label>
+                <input type="radio" id="e53-l-no" name="e53-l" value="no" aria-label="No for question E5.3-L"
+                  [(ngModel)]="formDataE53.l" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e53-remarks-l" class="sr-only">Remarks for question E5.3-L</label>
+                <input type="text" id="e53-remarks-l" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.3-L" [(ngModel)]="formDataE53.remarksL" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div class="bg-gray-100 rounded-t p-2 text-center ">
+        <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.4 Conveyance Security
+        </h2>
+      </div>
+      <!-- E.5.4 Section -->
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left"></th>
+              <th class="p-2 border border-gray-300 text-left">Compliance</th>
+              <th class="p-2 border border-gray-300 text-center">Yes</th>
+              <th class="p-2 border border-gray-300 text-center">No</th>
+              <th class="p-2 border border-gray-300 text-left">Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">a)</td>
+              <td class="p-2 border border-gray-300">
+                Whether, to the extent possible, all conveyances used for the transportation of cargo within
+                the supply chain are capable of being effectively secured?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-a-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-a-yes" name="e54-a" value="yes" aria-label="Yes for question E5.4-A"
+                  [(ngModel)]="formDataE54.a" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-a-no" class="sr-only">No</label>
+                <input type="radio" id="e54-a-no" name="e54-a" value="no" aria-label="No for question E5.4-A"
+                  [(ngModel)]="formDataE54.a" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-a" class="sr-only">Remarks for question E5.4-A</label>
+                <input type="text" id="e54-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-A" [(ngModel)]="formDataE54.remarksA" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">b)</td>
+              <td class="p-2 border border-gray-300">
+                Whether, to the extent possible, all operators of conveyances used for transport of cargo are
+                trained to maintain the security of the conveyance and the cargo at all times while in its
+                custody?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-b-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-b-yes" name="e54-b" value="yes" aria-label="Yes for question E5.4-B"
+                  [(ngModel)]="formDataE54.b" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-b-no" class="sr-only">No</label>
+                <input type="radio" id="e54-b-no" name="e54-b" value="no" aria-label="No for question E5.4-B"
+                  [(ngModel)]="formDataE54.b" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-b" class="sr-only">Remarks for question E5.4-B</label>
+                <input type="text" id="e54-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-B" [(ngModel)]="formDataE54.remarksB" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">c)</td>
+              <td class="p-2 border border-gray-300">
+                Whether all operators are required to report actual or suspicious incident to designated
+                security department staff of the applicant company as well as to maintain records of these
+                reports, which should be available to the AEO Programme Team and the Customs?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-c-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-c-yes" name="e54-c" value="yes" aria-label="Yes for question E5.4-C"
+                  [(ngModel)]="formDataE54.c" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-c-no" class="sr-only">No</label>
+                <input type="radio" id="e54-c-no" name="e54-c" value="no" aria-label="No for question E5.4-C"
+                  [(ngModel)]="formDataE54.c" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-c" class="sr-only">Remarks for question E5.4-C</label>
+                <input type="text" id="e54-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-C" [(ngModel)]="formDataE54.remarksC" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">d)</td>
+              <td class="p-2 border border-gray-300">
+                Whether potential places of concealment of illegal goods on conveyances are regularly
+                inspected? (Such places include all internal and external compartments & panels.)
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-d-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-d-yes" name="e54-d" value="yes" aria-label="Yes for question E5.4-D"
+                  [(ngModel)]="formDataE54.d" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-d-no" class="sr-only">No</label>
+                <input type="radio" id="e54-d-no" name="e54-d" value="no" aria-label="No for question E5.4-D"
+                  [(ngModel)]="formDataE54.d" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-d" class="sr-only">Remarks for question E5.4-D</label>
+                <input type="text" id="e54-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-D" [(ngModel)]="formDataE54.remarksD" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">e)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the transporters are required to maintain the conveyance integrity while it is en route
+                transporting cargo to export/import ports or import/transit containers by utilizing a tracking
+                and monitoring activity log or records?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-e-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-e-yes" name="e54-e" value="yes" aria-label="Yes for question E5.4-E"
+                  [(ngModel)]="formDataE54.e" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-e-no" class="sr-only">No</label>
+                <input type="radio" id="e54-e-no" name="e54-e" value="no" aria-label="No for question E5.4-E"
+                  [(ngModel)]="formDataE54.e" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-e" class="sr-only">Remarks for question E5.4-E</label>
+                <input type="text" id="e54-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-E" [(ngModel)]="formDataE54.remarksE" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">f)</td>
+              <td class="p-2 border border-gray-300">
+                Whether pre-determined routes are identified by the dispatcher?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-f-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-f-yes" name="e54-f" value="yes" aria-label="Yes for question E5.4-F"
+                  [(ngModel)]="formDataE54.f" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-f-no" class="sr-only">No</label>
+                <input type="radio" id="e54-f-no" name="e54-f" value="no" aria-label="No for question E5.4-F"
+                  [(ngModel)]="formDataE54.f" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-f" class="sr-only">Remarks for question E5.4-F</label>
+                <input type="text" id="e54-remarks-f" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-F" [(ngModel)]="formDataE54.remarksF" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">g)</td>
+              <td class="p-2 border border-gray-300">
+                Whether procedures are in place for random route checks, and for documenting and verifying
+                the length of time between the loading point/trailer pickup and the delivery destinations?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-g-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-g-yes" name="e54-g" value="yes" aria-label="Yes for question E5.4-G"
+                  [(ngModel)]="formDataE54.g" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-g-no" class="sr-only">No</label>
+                <input type="radio" id="e54-g-no" name="e54-g" value="no" aria-label="No for question E5.4-G"
+                  [(ngModel)]="formDataE54.g" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-g" class="sr-only">Remarks for question E5.4-G</label>
+                <input type="text" id="e54-remarks-g" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-G" [(ngModel)]="formDataE54.remarksG" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">h)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the dispatcher has a system to ensure that the drivers notify the dispatcher of any
+                route delays due to weather, traffic and/or other reasons?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-h-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-h-yes" name="e54-h" value="yes" aria-label="Yes for question E5.4-H"
+                  [(ngModel)]="formDataE54.h" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-h-no" class="sr-only">No</label>
+                <input type="radio" id="e54-h-no" name="e54-h" value="no" aria-label="No for question E5.4-H"
+                  [(ngModel)]="formDataE54.h" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-h" class="sr-only">Remarks for question E5.4-H</label>
+                <input type="text" id="e54-remarks-h" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-H" [(ngModel)]="formDataE54.remarksH" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">i)</td>
+              <td class="p-2 border border-gray-300">
+                Whether the management of transporters is required to perform a documented, periodic and
+                random verification process to ensure that the logs are maintained and conveyance tracking and
+                monitoring procedures are being followed and enforced?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-i-yes" class="sr-only">Yes</label>
+                <input type="radio" id="e54-i-yes" name="e54-i" value="yes" aria-label="Yes for question E5.4-I"
+                  [(ngModel)]="formDataE54.i" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="e54-i-no" class="sr-only">No</label>
+                <input type="radio" id="e54-i-no" name="e54-i" value="no" aria-label="No for question E5.4-I"
+                  [(ngModel)]="formDataE54.i" />
+              </td>
+              <td class="p-2 border border-gray-300">
+                <label for="e54-remarks-i" class="sr-only">Remarks for question E5.4-I</label>
+                <input type="text" id="e54-remarks-i" class="w-full p-1 border border-gray-300 rounded"
+                  aria-label="Remarks for question E5.4-I" [(ngModel)]="formDataE54.remarksI" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-gray-100 rounded-t p-2 text-center ">
+        <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.5 Personnel security
+        </h2>
+      </div>
+        <!-- E.5.5 Section -->
+  <div class="overflow-x-auto mb-4">
+    <table class="w-full table-auto border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-2 border border-gray-300 text-left"></th>
+          <th class="p-2 border border-gray-300 text-left">Compliance</th>
+          <th class="p-2 border border-gray-300 text-center">Yes</th>
+          <th class="p-2 border border-gray-300 text-center">No</th>
+          <th class="p-2 border border-gray-300 text-left">Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-2 border border-gray-300">a)</td>
+          <td class="p-2 border border-gray-300">
+            Whether all reasonable precautions have been taken when recruiting new staff to verify that
+            they are not previously convicted of security-related, customs or other criminal offences?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-a-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e55-a-yes" name="e55-a" value="yes" aria-label="Yes for question E5.5-A"
+              [(ngModel)]="formDataE55.a" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-a-no" class="sr-only">No</label>
+            <input type="radio" id="e55-a-no" name="e55-a" value="no" aria-label="No for question E5.5-A"
+              [(ngModel)]="formDataE55.a" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e55-remarks-a" class="sr-only">Remarks for question E5.5-A</label>
+            <input type="text" id="e55-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.5-A" [(ngModel)]="formDataE55.remarksA" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">b)</td>
+          <td class="p-2 border border-gray-300">
+            Whether periodic background checks are conducted on employees working in security sensitive
+            positions?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-b-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e55-b-yes" name="e55-b" value="yes" aria-label="Yes for question E5.5-B"
+              [(ngModel)]="formDataE55.b" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-b-no" class="sr-only">No</label>
+            <input type="radio" id="e55-b-no" name="e55-b" value="no" aria-label="No for question E5.5-B"
+              [(ngModel)]="formDataE55.b" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e55-remarks-b" class="sr-only">Remarks for question E5.5-B</label>
+            <input type="text" id="e55-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.5-B" [(ngModel)]="formDataE55.remarksB" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">c)</td>
+          <td class="p-2 border border-gray-300">
+            Whether employee identification procedures require all employees to carry proper identification
+            that uniquely identifies the employee and organisation?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-c-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e55-c-yes" name="e55-c" value="yes" aria-label="Yes for question E5.5-C"
+              [(ngModel)]="formDataE55.c" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-c-no" class="sr-only">No</label>
+            <input type="radio" id="e55-c-no" name="e55-c" value="no" aria-label="No for question E5.5-C"
+              [(ngModel)]="formDataE55.c" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e55-remarks-c" class="sr-only">Remarks for question E5.5-C</label>
+            <input type="text" id="e55-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.5-C" [(ngModel)]="formDataE55.remarksC" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">d)</td>
+          <td class="p-2 border border-gray-300">
+            Whether procedures are in place to identify, record and deal with unauthorized or
+            unidentified persons, such as photo identification and sign-in registers for visitors etc. at
+            all points of entry?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-d-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e55-d-yes" name="e55-d" value="yes" aria-label="Yes for question E5.5-D"
+              [(ngModel)]="formDataE55.d" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-d-no" class="sr-only">No</label>
+            <input type="radio" id="e55-d-no" name="e55-d" value="no" aria-label="No for question E5.5-D"
+              [(ngModel)]="formDataE55.d" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e55-remarks-d" class="sr-only">Remarks for question E5.5-D</label>
+            <input type="text" id="e55-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.5-D" [(ngModel)]="formDataE55.remarksD" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">e)</td>
+          <td class="p-2 border border-gray-300">
+            Whether procedures are in place to expeditiously remove identification and access to premises
+            and information for employees whose employment is terminated?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-e-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e55-e-yes" name="e55-e" value="yes" aria-label="Yes for question E5.5-E"
+              [(ngModel)]="formDataE55.e" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e55-e-no" class="sr-only">No</label>
+            <input type="radio" id="e55-e-no" name="e55-e" value="no" aria-label="No for question E5.5-E"
+              [(ngModel)]="formDataE55.e" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e55-remarks-e" class="sr-only">Remarks for question E5.5-E</label>
+            <input type="text" id="e55-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.5-E" [(ngModel)]="formDataE55.remarksE" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.6 Business Partner Security
+    </h2>
+  </div>
+    <!-- E.5.6 Section -->
+    <div class="overflow-x-auto mb-4">
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-2 border border-gray-300 text-left"></th>
+            <th class="p-2 border border-gray-300 text-left">Compliance</th>
+            <th class="p-2 border border-gray-300 text-center">Yes</th>
+            <th class="p-2 border border-gray-300 text-center">No</th>
+            <th class="p-2 border border-gray-300 text-left">Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border border-gray-300">a)</td>
+            <td class="p-2 border border-gray-300">
+              Whether the applicant has written and verifiable process including the capability of
+              financial soundness and compliance with the safety requirement set by the contracts as well as
+              the capability of detection and correction of safety defects, for selection of business
+              partners?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-a-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-a-yes" name="e56-a" value="yes" aria-label="Yes for question E5.6-A"
+                [(ngModel)]="formDataE56.a" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-a-no" class="sr-only">No</label>
+              <input type="radio" id="e56-a-no" name="e56-a" value="no" aria-label="No for question E5.6-A"
+                [(ngModel)]="formDataE56.a" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <!-- your-component.component.html -->
+              <input type="text" id="e56-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-A" [(ngModel)]="formDataE56.remarksA" />
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">b)</td>
+            <td class="p-2 border border-gray-300">
+              For AEO business partners, whether the applicant has obtained the copies of their AEO
+              certificate?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-b-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-b-yes" name="e56-b" value="yes" aria-label="Yes for question E5.6-B"
+                [(ngModel)]="formDataE56.b" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-b-no" class="sr-only">No</label>
+              <input type="radio" id="e56-b-no" name="e56-b" value="no" aria-label="No for question E5.6-B"
+                [(ngModel)]="formDataE56.b" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <label for="e56-remarks-b" class="sr-only">Remarks for question E5.6-B</label>
+              <input type="text" id="e56-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-B" [(ngModel)]="formDataE56.remarksB" />
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">c)</td>
+            <td class="p-2 border border-gray-300">
+              For non-AEO business partners, whether the applicant has obtained written confirmation from
+              them that they meet AEO equivalent security criteria?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-c-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-c-yes" name="e56-c" value="yes" aria-label="Yes for question E5.6-C"
+                [(ngModel)]="formDataE56.c" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-c-no" class="sr-only">No</label>
+              <input type="radio" id="e56-c-no" name="e56-c" value="no" aria-label="No for question E5.6-C"
+                [(ngModel)]="formDataE56.c" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <label for="e56-remarks-c" class="sr-only">Remarks for question E5.6-C</label>
+              <input type="text" id="e56-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-C" [(ngModel)]="formDataE56.remarksC" />
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">d)</td>
+            <td class="p-2 border border-gray-300">
+              Whether The applicant may obtain any of the following written documents from such business
+              partners for demonstrating their compliance with security criteria:
+              <br />
+              (i) Contractual document
+              <br />
+              (ii) A completed self-assessment security questionnaire from such applicant
+              <br />
+              (iii) A written statement from them applying confirming their compliance with AEO security
+              criteria.
+              <br />
+              (iv) Senior business partner officer attesting to compliance.
+              <br />
+              (iv) Documents from the business partners demonstrating their compliance with a similar or
+              equivalent and accredited security program administered by a foreign Customs authority.
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-d-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-d-yes" name="e56-d" value="yes" aria-label="Yes for question E5.6-D"
+                [(ngModel)]="formDataE56.d" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-d-no" class="sr-only">No</label>
+              <input type="radio" id="e56-d-no" name="e56-d" value="no" aria-label="No for question E5.6-D"
+                [(ngModel)]="formDataE56.d" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <label for="e56-remarks-d" class="sr-only">Remarks for question E5.6-D</label>
+              <input type="text" id="e56-remarks-d" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-D" [(ngModel)]="formDataE56.remarksD" />
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">e)</td>
+            <td class="p-2 border border-gray-300">
+              Whether a system exists to encourage other associated with his/her business partners to
+              assess and enhance supply chain security?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-e-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-e-yes" name="e56-e" value="yes" aria-label="Yes for question E5.6-E"
+                [(ngModel)]="formDataE56.e" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-e-no" class="sr-only">No</label>
+              <input type="radio" id="e56-e-no" name="e56-e" value="no" aria-label="No for question E5.6-E"
+                [(ngModel)]="formDataE56.e" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <label for="e56-remarks-e" class="sr-only">Remarks for question E5.6-E</label>
+              <input type="text" id="e56-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-E" [(ngModel)]="formDataE56.remarksE" />
+            </td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">f)</td>
+            <td class="p-2 border border-gray-300">
+              Whether a system is in place for periodic reviews of business partner’s processes and
+              facilities based on risk and the existence of security standards by the business partners is
+              as required by the applicant?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-f-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e56-f-yes" name="e56-f" value="yes" aria-label="Yes for question E5.6-F"
+                [(ngModel)]="formDataE56.f" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="e56-f-no" class="sr-only">No</label>
+              <input type="radio" id="e56-f-no" name="e56-f" value="no" aria-label="No for question E5.6-F"
+                [(ngModel)]="formDataE56.f" />
+            </td>
+            <td class="p-2 border border-gray-300">
+              <label for="e56-remarks-f" class="sr-only">Remarks for question E5.6-F</label>
+              <input type="text" id="e56-remarks-f" class="w-full p-1 border border-gray-300 rounded"
+                aria-label="Remarks for question E5.6-F" [(ngModel)]="formDataE56.remarksF" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-gray-100 rounded-t p-2 text-center ">
+      <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">E.5.7 Security Training and Threat Awareness
+      </h2>
+    </div>
+
+  <!-- E.5.7 Section -->
+
+  <div class="overflow-x-auto ">
+    <table class="w-full table-auto border border-gray-300">
+      <thead>
+        <tr class="bg-gray-200">
+          <th class="p-2 border border-gray-300 text-left"></th>
+          <th class="p-2 border border-gray-300 text-left">Compliance</th>
+          <th class="p-2 border border-gray-300 text-center">Yes</th>
+          <th class="p-2 border border-gray-300 text-center">No</th>
+          <th class="p-2 border border-gray-300 text-left">Remarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-2 border border-gray-300">a)</td>
+          <td class="p-2 border border-gray-300">
+            Whether the applicant has established and maintained a threat awareness program for employees
+            to increase cognizance of the threat at each point in the supply chain?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-a-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e57-a-yes" name="e57-a" value="yes" aria-label="Yes for question E5.7-A"
+              [(ngModel)]="formDataE57.a" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-a-no" class="sr-only">No</label>
+            <input type="radio" id="e57-a-no" name="e57-a" value="no" aria-label="No for question E5.7-A"
+              [(ngModel)]="formDataE57.a" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e57-remarks-a" class="sr-only">Remarks for question E5.7-A</label>
+            <input type="text" id="e57-remarks-a" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.7-A" [(ngModel)]="formDataE57.remarksA" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">b)</td>
+          <td class="p-2 border border-gray-300">
+            Whether employees of the applicant are aware of the procedures, which are in place to address
+            a situation and how to report it?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-b-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e57-b-yes" name="e57-b" value="yes" aria-label="Yes for question E5.7-B"
+              [(ngModel)]="formDataE57.b" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-b-no" class="sr-only">No</label>
+            <input type="radio" id="e57-b-no" name="e57-b" value="no" aria-label="No for question E5.7-B"
+              [(ngModel)]="formDataE57.b" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e57-remarks-b" class="sr-only">Remarks for question E5.7-B</label>
+            <input type="text" id="e57-remarks-b" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.7-B" [(ngModel)]="formDataE57.remarksB" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">c)</td>
+          <td class="p-2 border border-gray-300">
+            Whether specific trainings are offered to assist employees for maintaining cargo integrity,
+            reporting internal conspiracies and protecting access controls?
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-c-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e57-c-yes" name="e57-c" value="yes" aria-label="Yes for question E5.7-C"
+              [(ngModel)]="formDataE57.c" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-c-no" class="sr-only">No</label>
+            <input type="radio" id="e57-c-no" name="e57-c" value="no" aria-label="No for question E5.7-C"
+              [(ngModel)]="formDataE57.c" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e57-remarks-c" class="sr-only">Remarks for question E5.7-C</label>
+            <input type="text" id="e57-remarks-c" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.7-C" [(ngModel)]="formDataE57.remarksC" />
+          </td>
+        </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">d)</td>
+          <td class="p-2 border border-gray-300">
+              Whether supply chain security trainings of employees include the following items?
+              <br />
+              1. Security policy of the company.
+              <br />
+              2. Potential risk to internal security of the company.
+              <br />
+              3. Maintaining cargo security.
+              <br />
+              4. Access control measures of the company.
+              <br />
+              5. Identifying and reporting suspicious cargo
+              <br />
+              and personnel.
+              <br />
+              6. Conveyance management and cargo security for secure movement to designated locations.
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+              <label for="e57-d-yes" class="sr-only">Yes</label>
+              <input type="radio" id="e57-d-yes" name="e57-d" value="yes" aria-label="Yes for question E5.7-D"
+                  [(ngModel)]="formDataE57.d" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+              <label for="e57-d-no" class="sr-only">No</label>
+              <input type="radio" id="e57-d-no" name="e57-d" value="no" aria-label="No for question E5.7-D"
+                  [(ngModel)]="formDataE57.d" />
+          </td>
+          <td class="p-2 border border-gray-300">
+              <label for="e57-remarks-d" class="sr-only">Upload Training Materials</label>
+              <input type="file" id="e57-remarks-d" (change)="onFileE57DSelected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Training Materials for question E5.7-D" />
+              <textarea id="e57-remarks-d-text" class="w-full p-1 border border-gray-300 rounded mt-2"
+                  aria-label="Remarks for question E5.7-D" [(ngModel)]="formDataE57.remarksD"></textarea>
+          </td>
+      </tr>
+        <tr>
+          <td class="p-2 border border-gray-300">e)</td>
+          <td class="p-2 border border-gray-300">
+            Whether the records of security training are maintained and are available for verification by
+            the AEO Programme team and Customs.
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-e-yes" class="sr-only">Yes</label>
+            <input type="radio" id="e57-e-yes" name="e57-e" value="yes" aria-label="Yes for question E5.7-E"
+              [(ngModel)]="formDataE57.e" />
+          </td>
+          <td class="p-2 border border-gray-300 text-center">
+            <label for="e57-e-no" class="sr-only">No</label>
+            <input type="radio" id="e57-e-no" name="e57-e" value="no" aria-label="No for question E5.7-E"
+              [(ngModel)]="formDataE57.e" />
+          </td>
+          <td class="p-2 border border-gray-300">
+            <label for="e57-remarks-e" class="sr-only">Remarks for question E5.7-E</label>
+            <input type="text" id="e57-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+              aria-label="Remarks for question E5.7-E" [(ngModel)]="formDataE57.remarksE" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    </div>
+
+    <div class="mb-2 text-center ">
+      <h4 class="font-bold text-gray-700">Note:</h4>
+      <ol class=" pl-5 text-gray-600">
+        <li>
+          The Self-Assessment can be carried out by the applicant themselves or through a third party having
+          expertise.
+        </li>
+        <li>
+          If some points are not applicable, these should be mentioned in the 'Remarks' column with reason
+          thereof.
+        </li>
+      </ol>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<app-sticky-button></app-sticky-button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

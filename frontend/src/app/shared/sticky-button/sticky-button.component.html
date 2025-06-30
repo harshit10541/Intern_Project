@@ -1,0 +1,16 @@
+<div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 py-2 px-4 shadow-md z-50">
+  <div class="container mx-auto flex flex-col sm:flex-row justify-end items-center space-y-2 sm:space-y-0 sm:space-x-4">
+    <button
+      class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+      (click)="onSaveAsDraft()"
+      [disabled]="saveAsDraftDisabled">
+      Save as Draft
+    </button>
+    <button
+      class="bg-indigo-500 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+      (click)="onSubmit()"
+      [disabled]="submitDisabled">
+      Submit
+    </button>
+  </div>
+</div>

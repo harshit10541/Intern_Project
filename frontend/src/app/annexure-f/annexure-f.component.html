@@ -1,0 +1,81 @@
+
+
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO
+      STATUS</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Annexure - F</h2>
+      <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Business Partners Details</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T3 only)</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <div class="overflow-x-auto">
+        <table class="table-auto w-full border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="px-4 py-2 border border-gray-300">Sl. No.</th>
+              <th class="px-4 py-2 border border-gray-300">Name and Address</th>
+              <th class="px-4 py-2 border border-gray-300">Nature of Business
+                <br />
+                <span class="text-sm">(Logistics providers, Custodians/Terminal operators, Customs Brokers or
+                  Warehouse
+                  operators)</span>
+              </th>
+              <th class="px-4 py-2 border border-gray-300">Whether Holder of AEO-T2 Certificate (Yes/No)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let partner of businessPartners; let i = index">
+              <td class="px-4 py-2 border border-gray-300">
+                {{ partner.slNo }}
+              </td>
+              <td class="px-4 py-2 border border-gray-300">
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  [(ngModel)]="partner.nameAddress" name="nameAddress{{i}}" placeholder="Business Partner Name and Address"></textarea>
+              </td>
+              <td class="px-4 py-2 border border-gray-300">
+                <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  [(ngModel)]="partner.natureOfBusiness" name="natureOfBusiness{{i}}" placeholder="Nature of Business">
+              </td>
+              <td class="px-4 py-2 border border-gray-300 text-center">
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  [(ngModel)]="partner.aeoT2Certificate" name="aeoT2Certificate{{i}}">
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <button (click)="addRow()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mt-4"
+        type="button">
+        Add Row
+      </button>
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+<app-sticky-button></app-sticky-button>

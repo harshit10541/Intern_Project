@@ -1,0 +1,37 @@
+@keyframes slide-fade-up {
+  0% {
+    transform: translateY(50px) rotate(-3deg); /* Initial: slightly rotated */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);     /* Final: no rotation */
+    opacity: 1;
+  }
+}
+
+.animate-slide-fade {
+  opacity: 0;
+  animation: slide-fade-up 0.5s ease-out forwards;
+}
+
+
+
+@keyframes slide-fade-up1 {
+  0% {
+    transform: translateY(50px) scale(0.9);  /* Initial: slightly smaller */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);      /* Final: full size */
+    opacity: 1;
+  }
+}
+
+.animate-slide-fade1 {
+  opacity: 0;
+  animation: slide-fade-up1 0.5s ease-out forwards;
+}
+
+

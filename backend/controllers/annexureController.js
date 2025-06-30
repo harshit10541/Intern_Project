@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream:controllers/annexureController.js
+=======
+
+>>>>>>> Stashed changes:backend/controllers/annexureController.js
 import { annexureAModel} from '../models/annexureA.model.js';
 import { annexureBModel } from '../models/annexureB.model.js';
 import { annexureCModel } from '../models/annexureC.model.js';
