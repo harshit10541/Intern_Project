@@ -1,0 +1,287 @@
+<!-- msme-annexure2.component.html -->
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer"
+    (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO T1
+      & T2 STATUS (for MSMEs)</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">MSME Annexure – 2</h2>
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Legal,
+        Managing Commercial Records, and Financial Solvency Compliance</h2>
+      <p class="text-gray-700 text-sm mb-4">The applicant is required to provide information in this prescribed
+        format in terms of Para 3 (iv) of the Circular No. 54/2020 dated 15.12.2020.</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left">S.No.</th>
+              <th class="p-2 border border-gray-300 text-left">COMPLIANCE PARAMETER</th>
+              <th class="p-2 border border-gray-300 text-center">YES</th>
+              <th class="p-2 border border-gray-300 text-center">NO</th>
+              <th class="p-2 border border-gray-300 text-left">REMARK</th>
+              <th class="p-2 border border-gray-300 text-left"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">1.</td>
+              <td class="p-2 border border-gray-300">
+                Whether there are any cases of infringement of Customs Laws by any of the following persons
+                over the two financial years preceding the submission of the application:
+                <br />
+                (i) the applicant;
+                <br />
+                (ii) the person responsible in the applicant company for customs matters.
+                <br />
+                If yes, please indicate the details of the cases.
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="q1-yes" class="sr-only">Yes</label>
+                <input type="radio" id="q1-yes" name="q1" value="yes" [(ngModel)]="formData.q1"
+                  aria-label="Yes for question 1" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="q1-no" class="sr-only">No</label>
+                <input type="radio" id="q1-no" name="q1" value="no" [(ngModel)]="formData.q1"
+                  aria-label="No for question 1" />
+              </td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+                <label for="q1-file" class="sr-only">Upload Supporting Documents</label>
+                <input type="file" id="q1-file" (change)="onFileQ1Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Supporting Documents for question 1" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">2.</td>
+              <td class="p-2 border border-gray-300">
+                Have you been issued an SCN by Customs or GST (erstwhile Central Excise and Service Tax)
+                authorities in last two financial years? If yes, kindly bring out:
+                <br />
+                1. Brief of the breach including the provision invoked in the SCN.
+                <br />
+                2. Whether SCN has been adjudicated? If Yes, bring out the decision of the order.
+                <br />
+                3. Whether there is any case against you wherein prosecution has been launched?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="q2-yes" class="sr-only">Yes</label>
+                <input type="radio" id="q2-yes" name="q2" value="yes" [(ngModel)]="formData.q2"
+                  aria-label="Yes for question 2" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="q2-no" class="sr-only">No</label>
+                <input type="radio" id="q2-no" name="q2" value="no" [(ngModel)]="formData.q2"
+                  aria-label="No for question 2" />
+              </td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+
+                <label for="q2-file" class="sr-only">Upload SCN Documents</label>
+                <input type="file" id="q2-file" (change)="onFileQ2Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload SCN Documents for question 2" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">3.</td>
+              <td class="p-2 border border-gray-300">
+                Provide the break-up of contingent liability of last two financial years. If any contingent
+                liability pertains to Customs or GST(erstwhile Central Excise and Service Tax) provide the brief
+                of such liability
+              </td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 " colspan="2"><textarea [(ngModel)]="formData.q3Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea>
+
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">4(i).</td>
+              <td class="p-2 border border-gray-300">Provide procedures for administering of license,
+                authorizations connected to exports/imports</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+
+                <label for="q4i-file" class="sr-only">Upload Procedure Documents</label>
+                <input type="file" id="q4i-file" (change)="onFileQ4iSelected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Procedure Documents for question 4(i)" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">4(ii).</td>
+              <td class="p-2 border border-gray-300">Provide procedures for administering the commercial
+                records connected to exports/imports</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+
+              <td class="p-2 border border-gray-300">
+
+                <label for="q4ii-file" class="sr-only">Upload Procedure Documents</label>
+                <input type="file" id="q4ii-file" (change)="onFileQ4iiSelected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Procedure Documents for question 4(ii)" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">4(iii).</td>
+              <td class="p-2 border border-gray-300">Do you deal in goods subject to Anti-dumping duties,
+                Safeguard duties or Countervailing duties? If yes, please provide details of the goods</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300" colspan="2">
+                <textarea [(ngModel)]="formData.q4iiiRemark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea>
+
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">5.</td>
+              <td class="p-2 border border-gray-300">Provide procedures for verifying the accuracy of Customs
+                declarations including procedure in place for the establishment of Customs Value and tariff
+                classification.
+                <br />
+                In case any Business Partner/representative is involved in the above mentioned
+                process/formalities, please provide details of the representative along with the document that
+                brings out the responsibility of such representative.
+              </td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+
+                <label for="q5-file" class="sr-only">Upload Documents for verifying the accuracy</label>
+                <input type="file" id="q5-file" (change)="onFileQ5Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload  Documents for verifying the accuracy for question 5" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">6.</td>
+              <td class="p-2 border border-gray-300">Provide in brief the procedure to ensure the protection of
+                your computerized record system from unauthorized access</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+
+                <label for="q6-file" class="sr-only">Upload Record system for unauthorized access details</label>
+                <input type="file" id="q6-file" (change)="onFileQ6Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Record system for unauthorized access details for question 6" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">7.</td>
+              <td class="p-2 border border-gray-300">Provide procedures for backup, recovery, archiving, and
+                retrieval of your business record.
+                <br />
+                Please state for how long this data is achieved.
+              </td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+
+                <label for="q7-file" class="sr-only">Upload Business record procedure</label>
+                <input type="file" id="q7-file" (change)="onFileQ7Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Business record procedure for question 7" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">8.</td>
+              <td class="p-2 border border-gray-300">Provide the Net-worth along with the audited Audit Report of
+                your company for the last two financial years.</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+                <label for="q8-file" class="sr-only">Upload Audit Report</label>
+                <input type="file" id="q8-file" (change)="onFileQ8Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Audit Report for question 8" />
+
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">9.</td>
+              <td class="p-2 border border-gray-300">Provide the Net Current Assets for your company for the last
+                two financial years. If it is negative, bring out the reason for the same.</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+
+              <td class="p-2 border border-gray-300">
+
+                <label for="q9-file" class="sr-only">Upload Net Current Assets details</label>
+                <input type="file" id="q9-file" (change)="onFileQ9Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload Net Current Assets details for question 9" />
+              </td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">10.</td>
+              <td class="p-2 border border-gray-300">Provide details of any insolvency, bankruptcy or liquidation
+                proceedings taken against your company in last two financial years. Please give a declaration in
+                this regard duly signed by CFO or head of Finance department.</td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300 text-center"></td>
+              <td class="p-2 border border-gray-300"> <textarea [(ngModel)]="formData.q1Remark"
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+              <td class="p-2 border border-gray-300">
+                <label for="q10-file" class="sr-only">Upload Proceedings details</label>
+
+                <input type="file" id="q10-file" (change)="onFileQ10Selected($event)" multiple
+                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                  aria-label="Upload  Proceedings details for question 10" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6">
+        <p class="text-gray-600">Note: The applicant should enclose appropriate documentary evidence in support of the
+          above claims.</p>
+      </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+<app-sticky-button></app-sticky-button>

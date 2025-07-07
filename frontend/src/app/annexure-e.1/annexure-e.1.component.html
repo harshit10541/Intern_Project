@@ -1,0 +1,265 @@
+  <!-- E.1 Section -->
+
+  <div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+    <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+      <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">SELF-ASSESSMENT FORM</h1>
+      <!-- <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+        applicant)</p> -->
+    </div>
+
+    <div class="bg-white shadow-md rounded w-full max-w-8xl mx-auto">
+      <div class="bg-gray-200 rounded-t p-2 text-center ">
+          <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2 ">Annexure - E.1</h2>
+          <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">General Compliance</h2>
+          <!-- <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T1, AEO-T2, AEO-T3 and AEO-LO)</p> -->
+      </div>
+      <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+          <!-- main content -->
+          <div class="overflow-x-auto">
+              <table class="w-full table-auto rounded border border-gray-300">
+                  <thead>
+                      <tr class="bg-gray-200">
+                          <th class="p-2 border border-gray-300 text-left">E.1</th>
+                          <th class="p-2 border border-gray-300 text-left">Compliance</th>
+                          <th class="p-2 border border-gray-300 text-center">Yes</th>
+                          <th class="p-2 border border-gray-300 text-center">No</th>
+                          <th class="p-2 border border-gray-300 text-left">Remarks</th>
+                          <th class="p-2 border border-gray-300 text-left"></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td class="p-2 border border-gray-300">a)</td>
+                          <td class="p-2 border border-gray-300">
+                              Whether having Customs and/or other Departments' license/ certificate with respect to
+                              category of AEO application?
+                              <br />
+                              <span class="text-sm text-gray-500">Copy of the same may be provided.</span>
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-a-yes" class="sr-only">Yes</label>
+                              <input type="radio" id="e1-a-yes" name="e1-a" value="yes" aria-label="Yes for question a"
+                                  [(ngModel)]="formData.a" />
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-a-no" class="sr-only">No</label>
+                              <input type="radio" id="e1-a-no" name="e1-a" value="no" aria-label="No for question a"
+                                  [(ngModel)]="formData.a" />
+                          </td>
+                          <td class="p-2 border border-gray-300">
+                            <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                                aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                        </td>
+                          <td class="p-2 border border-gray-300">
+                              <label for="e1-remarks-a" class="sr-only">Upload License/Certificate</label>
+                              <input type="file" id="e1-remarks-a"
+                                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                                  aria-label="Upload License/Certificate for question a"
+                                  [(ngModel)]="formData.fileA" />
+                          </td>
+
+                      </tr>
+                      <tr>
+                          <td class="p-2 border border-gray-300">b)</td>
+                          <td class="p-2 border border-gray-300">
+                              Whether having other Customs, Central Excise, Service Tax and other Department's
+                              licenses/registration/ certificates?
+                              <br />
+                              <span class="text-sm text-gray-500">If yes, copies of these may be provided.</span>
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-b-yes" class="sr-only">Yes</label>
+                              <input type="radio" id="e1-b-yes" name="e1-b" value="yes" aria-label="Yes for question b"
+                                  [(ngModel)]="formData.b" />
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-b-no" class="sr-only">No</label>
+                              <input type="radio" id="e1-b-no" name="e1-b" value="no" aria-label="No for question b"
+                                  [(ngModel)]="formData.b" />
+                          </td>
+                          <td class="p-2 border border-gray-300">
+                            <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                                aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                        </td>
+                          <td class="p-2 border border-gray-300">
+                              <label for="e1-remarks-b" class="sr-only">Upload Licenses/Registrations/Certificates</label>
+                              <input type="file" id="e1-remarks-b"
+                                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                                  aria-label="Upload Licenses/Registrations/Certificates for question b"
+                                  [(ngModel)]="formData.fileB" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="p-2 border border-gray-300">c)</td>
+                          <td class="p-2 border border-gray-300">
+                              Type of business entity:
+                              <br />
+                              Whether Proprietorship Firm, Partnership Firm, Public or Private Limited Company etc.?
+                              <br />
+                              <span class="text-sm text-gray-500">Copy of the concerned registration etc. may be
+                                  provided.</span>
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center"></td>
+                          <td class="p-2 border border-gray-300 text-center"></td>
+                          <td class="p-2 border border-gray-300">
+                            <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                                aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                        </td>
+                          <td class="p-2 border border-gray-300">
+                              <label for="e1-remarks-c" class="sr-only">Upload Registration Copy</label>
+                              <input type="file" id="e1-remarks-c"
+                                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                                  aria-label="Upload Registration Copy for question c"
+                                  [(ngModel)]="formData.fileC" />
+                          </td>
+                      </tr>
+                      <tr>
+                        <td class="p-2 border border-gray-300">d)</td>
+                        <td class="p-2 border border-gray-300">
+                            Whether your entity is established in India?
+                            <br />
+                            <span class="text-sm text-gray-500">If yes, please provide evidence in Remarks column which
+                                may
+                                include:</span>
+                            <br />
+                            <ul class="list-disc pl-5 text-sm text-gray-500">
+                                <li>A certificate of registration issued by the Registrar of Companies.</li>
+                                <li>
+                                    Type of business entity, whether Proprietorship Firm, Partnership Firm, Public or
+                                    Private
+                                    Limited Company and in that case the details of the Proprietor, Partners and
+                                    Directors
+                                    as the
+                                    case may be should be provided along with the details of Company Secretary.
+                                </li>
+                                <li>
+                                    Details of places/locations where goods are being handled, e.g. loading, unloading,
+                                    storage
+                                    etc., in the course of supply to/from international supply chain.
+                                </li>
+                                <li>Proof that the business has its own accounts.</li>
+                            </ul>
+                        </td>
+                        <td class="p-2 border border-gray-300 text-center">
+                            <label for="e1-d-yes" class="sr-only">Yes</label>
+                            <input type="radio" id="e1-d-yes" name="e1-d" value="yes" aria-label="Yes for question d"
+                                [(ngModel)]="formData.d" />
+                        </td>
+                        <td class="p-2 border border-gray-300 text-center">
+                            <label for="e1-d-no" class="sr-only">No</label>
+                            <input type="radio" id="e1-d-no" name="e1-d" value="no" aria-label="No for question d"
+                                [(ngModel)]="formData.d" />
+                        </td>
+                        <td class="p-2 border border-gray-300">
+                          <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                              aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                      </td>
+                        <td class="p-2 border border-gray-300">
+                            <label for="e1-remarks-d" class="sr-only">Upload Evidence</label>
+                            <input type="file" id="e1-remarks-d" (change)="onFileDSelected($event)" multiple
+                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                                aria-label="Upload Evidence for question d" />
+                        </td>
+                    </tr>
+                      <tr>
+                          <td class="p-2 border border-gray-300">e)</td>
+                          <td class="p-2 border border-gray-300">
+                              Whether your entity has business activities for at least three financial years preceding the
+                              date of
+                              application?
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-e-yes" class="sr-only">Yes</label>
+                              <input type="radio" id="e1-e-yes" name="e1-e" value="yes" aria-label="Yes for question e"
+                                  [(ngModel)]="formData.e" />
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-e-no" class="sr-only">No</label>
+                              <input type="radio" id="e1-e-no" name="e1-e" value="no" aria-label="No for question e"
+                                  [(ngModel)]="formData.e" />
+                          </td>
+                          <td class="p-2 border border-gray-300" colspan="2">
+                              <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                                  aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="p-2 border border-gray-300">f)</td>
+                          <td class="p-2 border border-gray-300">
+                              Whether you have filed or handled at least 25 documents i.e. Bills of Entry or Shipping
+                              bills,
+                              with the Customs Authorities during the last financial year.
+                              <br />
+                              <span class="text-sm text-gray-500">A summary sheet may be provided.</span>
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-f-yes" class="sr-only">Yes</label>
+                              <input type="radio" id="e1-f-yes" name="e1-f" value="yes" aria-label="Yes for question f"
+                                  [(ngModel)]="formData.f" />
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-f-no" class="sr-only">No</label>
+                              <input type="radio" id="e1-f-no" name="e1-f" value="no" aria-label="No for question f"
+                                  [(ngModel)]="formData.f" />
+                          </td>
+                          <td class="p-2 border border-gray-300">
+                            <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                                aria-label="Remarks for question e" [(ngModel)]="formData.remarksE" />
+                        </td>
+                          <td class="p-2 border border-gray-300">
+                              <label for="e1-remarks-f" class="sr-only">Upload Summary Sheet</label>
+                              <input type="file" id="e1-remarks-f"
+                                  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+                                  aria-label="Upload Summary Sheet for question f"
+                                  [(ngModel)]="formData.fileF" />
+                          </td>
+                      </tr>
+                      <tr>
+                          <td class="p-2 border border-gray-300">g)</td>
+                          <td class="p-2 border border-gray-300">
+                              Whether the applicant has ever been convicted of a criminal offence? If so complete details
+                              of
+                              the
+                              same should be submitted.
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-g-yes" class="sr-only">Yes</label>
+                              <input type="radio" id="e1-g-yes" name="e1-g" value="yes" aria-label="Yes for question g"
+                                  [(ngModel)]="formData.g" />
+                          </td>
+                          <td class="p-2 border border-gray-300 text-center">
+                              <label for="e1-g-no" class="sr-only">No</label>
+                              <input type="radio" id="e1-g-no" name="e1-g" value="no" aria-label="No for question g"
+                                  [(ngModel)]="formData.g" />
+                          </td>
+                          <td class="p-2 border border-gray-300" colspan="2">
+                              <label for="e1-remarks-g" class="sr-only">Remarks for question g</label>
+                              <input type="text" id="e1-remarks-g" class="w-full p-1 border border-gray-300 rounded"
+                                  aria-label="Remarks for question g" [(ngModel)]="formData.remarksG" />
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+
+
+      </div>
+
+
+
+  </div>
+
+  </div>
+
+
+
+
+  <app-sticky-button></app-sticky-button>
+
+
+
+
+
+

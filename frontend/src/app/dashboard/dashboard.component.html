@@ -1,0 +1,240 @@
+<!-- dashboard.component.html -->
+
+
+<!-- HTML template -->
+<div class="  text-white min-h-screen bg-gray-100">
+
+
+
+
+  <div class="bg-gradient-to-br from-white via-blue-50 to-sky-100 ">
+    <div class="form-header text-center p-4">
+      <!-- Logo Section -->
+      <div class="flex flex-wrap justify-center items-center animate-slide-fade1 ">
+        <img src="../../assets/images/lgo1.png" alt="AEO Logo" class="h-44 max-w-full object-contain transform transition-all duration-300 hover:scale-105 ">
+
+      </div>
+
+      <!-- Divider -->
+      <hr class=" border-t-2 border-gray-300 w-3/4 mx-auto mb-2" />
+
+      <!-- Heading -->
+      <!-- <h1 class="text-3xl md:text-3xl lg:text-5xl font-bold leading-tight bg-clip-text text-gray-800 uppercase mb-2 animate-slide-fade1 ">
+        Indian Customs
+      </h1> -->
+      <h1 class="text-xl md:text-2xl lg:text-3xl font-bold text-gray-800 uppercase animate-slide-fade1 ">
+        APPLICATION FOR AUTHORIZED ECONOMIC OPERATOR (AEO) STATUS
+      </h1>
+    </div>
+  </div>
+
+
+  <!--
+  <div class="container mx-auto flex items-center justify-center p-2 animate-slide-fade1 ">
+
+    <div class="w-16 md:w-24 lg:w-32 flex-shrink-0 mr-6 md:ml-8 lg:ml-12">
+      <img src="../../assets/images/logo2.png" alt="AEO Logo" class="w-full h-auto object-contain">
+    </div>
+
+
+
+    <div class="text-center">
+      <h1 class="text-3xl md:text-3xl lg:text-6xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-l from-blue-600 to-blue-900">
+        Indian Customs
+      </h1>
+      <span class="text-sm md:text-base lg:text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-orange-800 to-orange-400">
+        Authorised Economic Operator (AEO) Programme
+      </span>
+    </div>
+
+
+    <div class="w-16 md:w-24 lg:w-32 flex-shrink-0 ml-4 md:mr-8 lg:mr-12">
+      <img src="../../assets/images/logo1.png" alt="Customs Logo" class="w-full h-auto object-contain">
+    </div>
+  </div>
+</div> -->
+
+<div class="flex justify-center items-around p-6">
+  <div class="bg-white shadow-1xl rounded-xl p-4 max-w-full lg:w-170  transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+    <h2 class="text-base sm:text-lg md:text-xl font-bold mb-4 text-center text-black">Applying for</h2>
+    <div class="flex flex-wrap justify-around gap-4 sm:gap-6">
+      <!--  Use a hidden radio input for actual form submission, and style the label to look like the radio button. -->
+      <!-- T1 Option -->
+      <label class="flex items-center gap-2 cursor-pointer text-black">
+        <input type="radio" name="applyingFor" value="T1" (change)="selectOption('T1')" [checked]="selectedOptions['T1']" class="hidden" />
+        <span class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6  border-2 border-gray-500 rounded-full flex items-center justify-center  transition-all">
+          <!-- Inner circle for selected state -->
+            <span class="inner-circle  h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-black rounded-full" [class.hidden]="!selectedOptions['T1']"></span>
+          </span>
+        <span class="text-sm md:text-base lg:text-lg font-medium">T1</span>
+      </label>
+
+      <!-- T2 Option -->
+      <label class="flex items-center gap-2 cursor-pointer text-black">
+        <input type="radio" name="applyingFor" value="T2" (change)="selectOption('T2')" [checked]="selectedOptions['T2']" class="hidden" />
+          <span class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 border-2 border-gray-500 rounded-full flex items-center justify-center transition-all">
+          <span class=" inner-circle h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-black rounded-full" [class.hidden]="!selectedOptions['T2']"></span>
+          </span>
+        <span class="text-sm md:text-base lg:text-lg font-medium">T2</span>
+      </label>
+
+      <!-- T3 Option -->
+      <label class="flex items-center gap-2 cursor-pointer text-black">
+        <input type="radio" name="applyingFor" value="T3" (change)="selectOption('T3')" [checked]="selectedOptions['T3']" class="hidden" />
+         <span class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6  border-2 border-gray-500 rounded-full flex items-center justify-center transition-all">
+          <span class="inner-circle h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-black rounded-full" [class.hidden]="!selectedOptions['T3']"></span>
+          </span>
+        <span class="text-sm md:text-base lg:text-lg font-medium">T3</span>
+      </label>
+
+      <!-- LO Option -->
+      <label class="flex items-center gap-2 cursor-pointer text-black">
+        <input type="radio" name="applyingFor" value="LO" (change)="selectOption('LO')" [checked]="selectedOptions['LO']" class="hidden" />
+         <span class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6  border-2 border-gray-500 rounded-full flex items-center justify-center transition-all">
+          <span class="inner-circle h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-black rounded-full" [class.hidden]="!selectedOptions['LO']"></span>
+          </span>
+        <span class="text-sm md:text-base lg:text-lg font-medium">LO</span>
+      </label>
+
+      <!-- MSME Option -->
+      <label class="flex items-center gap-2 cursor-pointer text-black">
+        <input type="radio" name="applyingFor" value="MSME" (change)="selectOption('MSME')" [checked]="selectedOptions['MSME']" class="hidden" />
+          <span class="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 border-2 border-gray-500 rounded-full flex items-center justify-center transition-all">
+            <span class="inner-circle h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 bg-black rounded-full" [class.hidden]="!selectedOptions['MSME']"></span>
+            </span>
+        <span class="text-sm md:text-base lg:text-lg font-medium">MSME with T1, T2 & T3</span>
+      </label>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <div class="flex items-center justify-center">
+    <div class="p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-15">
+      <!-- Card Container -->
+      <ng-container *ngFor="let attachment of attachments">
+        <div *ngIf="isVisible(attachment.id)"
+             class="transition-all transform bg-white rounded-xl shadow-md overflow-hidden relative w-72 h-96 hover:scale-105 hover:shadow-lg hover:-translate-y-1 hover:duration-200 hover:ease-out animate-slide-fade">
+
+          <!-- Progress Circle (Conditionally Rendered) -->
+          <div class="absolute top-2 right-2" *ngIf="attachment.progress > 0">
+            <svg class="w-16 h-16" viewBox="0 0 100 100">
+              <circle class="progress-ring__background"
+                      stroke="#ddd"
+                      stroke-width="8"
+                      fill="transparent"
+                      r="40"
+                      cx="50"
+                      cy="50"/>
+              <circle class="progress-ring__circle"
+                      [attr.stroke-dasharray]="getCircumference()"
+                      [attr.stroke-dashoffset]="getStrokeDashoffset(attachment.progress)"
+                      stroke="#449554"
+                      stroke-width="8"
+                      fill="transparent"
+                      r="40"
+                      cx="50"
+                      cy="50"
+                      style="transform: rotate(-90deg); transform-origin: 50% 50%;"/>
+              <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" class="text-lg font-bold">
+                {{ attachment.progress }}%
+              </text>
+            </svg>
+          </div>
+
+          <!-- Blue Background -->
+          <div class="opacity-70 h-full w-full absolute top-0 left-0 rounded-xl">
+            <!-- Google Docs Image -->
+            <img src="../../assets/images/doc.png" alt="Google Docs Icon"
+                 class="max-w-full w-40 h-40 object-cover mx-auto rounded-xl" />
+          </div>
+
+          <!-- Folded Corner -->
+          <div class="absolute top-0 left-0 bg-yellow-400 w-15 h-15 rounded-br-2xl rounded-tl-xl  origin-bottom-left   flex items-center justify-center">
+            <div class="text-xl font-extrabold font-mono text-white">
+              {{ attachment.title }}
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="absolute top-1/2 left-0 right-0 p-2 transform -translate-y-1/6">
+            <div class="text-center font-semibold text-[#21215d] mb-2">
+              <p class="text-sm sm:text-base md:text-lg break-words overflow-hidden text-ellipsis whitespace-nowrap">
+                {{ attachment.name }}
+              </p>
+            </div>
+
+            <div class="text-center font-semibold text-[#21215d]">
+              <p class="text-xs sm:text-sm md:text-base leading-relaxed break-words overflow-hidden mt-4">
+                {{ attachment.description }}
+              </p>
+            </div>
+          </div>
+
+          <!-- View Button -->
+          <div class="absolute bottom-0 left-0 right-0">
+            <button (click)="navigateToForm(attachment.route)"
+                    class="w-full py-2 text-sm font-medium rounded-b-xl text-white bg-[#449554] focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 transition-colors duration-200">
+              View
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+
+  <div class="mt-10 p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+    <div class="transition-all transform bg-white rounded-xl shadow-md overflow-hidden relative w-72 h-86 hover:scale-105 hover:shadow-lg hover:-translate-y-1 hover:duration-200 hover:ease-out"
+    *ngFor="let attachment of attachments">
+
+    <div class="opacity-70 h-full w-full absolute top-0 left-0 rounded-xl">
+
+      <img src="../../assets/images/doc.png" alt="Google Docs Icon"
+        class="max-w-full w-40 h-40 object-cover mx-auto rounded-xl " />
+    </div>
+
+
+    <div
+      class="absolute top-0 left-0 bg-yellow-400 w-15 h-15 rounded-br-2xl origin-bottom-left flex items-center justify-center">
+
+      <div class="text-xl font-extrabold font-mono text-white">
+        {{ attachment.title }}
+      </div>
+    </div>
+
+
+    <div class="absolute top-1/2 left-0 right-0 p-2 transform -translate-y-1/6">
+      <div class="text-center font-semibold text-[#21215d] mb-2">
+        <p class="text-sm sm:text-base md:text-lg break-words overflow-hidden text-ellipsis whitespace-nowrap">
+          {{ attachment.name }}
+        </p>
+      </div>
+
+      <div class="text-center font-semibold text-[#21215d]">
+        <p class="text-xs sm:text-sm md:text-base leading-relaxed break-words overflow-hidden mt-4">
+          {{ attachment.description }}
+        </p>
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-0 right-0">
+      <button (click)="navigateToForm(attachment.route)"
+        class="w-full py-2 text-sm font-medium rounded-b-xl text-white bg-[#449554] focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50 transition-colors duration-200 backdrop-blur-sm">
+        View
+      </button>
+    </div>
+  </div>
+  </div>
+
+</div> -->

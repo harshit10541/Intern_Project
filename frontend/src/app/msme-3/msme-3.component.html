@@ -1,0 +1,590 @@
+
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO
+      STATUS</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">MSME Annexure – 3</h2>
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Safety and
+        Security Requirements</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for MSMEs applying for AEO T2 only)</p>
+
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <p class="text-center text-gray-500 mb-8">The applicant is required to provide information in this prescribed
+        format in terms of Para 3 (v) of the Circular No. 54/2020 dated 15.12.2020.</p>
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Premises Security
+    </h2>
+  </div>
+
+        <!-- Premises Security Section -->
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full table-auto border border-gray-300">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="p-2 border border-gray-300 text-left">S.No.</th>
+                <th class="p-2 border border-gray-300 text-left"></th>
+                <th class="p-2 border border-gray-300 text-center">YES</th>
+                <th class="p-2 border border-gray-300 text-center">NO</th>
+                <th class="p-2 border border-gray-300 text-left">REMARK</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2 border border-gray-300">1.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether the building/premises fully secured against unlawful entry i.e. :-
+                  <br />
+                  (i) Adequate fencing, lighting, and security of the perimeter is maintained.
+                  <br />
+                  (ii) Adequate procedure for issuance of lock & key by an authorized personnel is available.
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="prem-q1-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="prem-q1-yes" name="prem-q1" value="yes" [(ngModel)]="formData.premQ1"
+                    aria-label="Yes for Premises Security Q1" />
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="prem-q1-no" class="sr-only">No</label>
+                  <input type="radio" id="prem-q1-no" name="prem-q1" value="no" [(ngModel)]="formData.premQ1"
+                    aria-label="No for Premises Security Q1" />
+                </td>
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.premQ1Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+              <tr>
+                <td class="p-2 border border-gray-300">2.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether adequate procedures exist to check that only properly identified and authorized persons,
+                  vehicles and goods are permitted access?
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="prem-q2-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="prem-q2-yes" name="prem-q2" value="yes" [(ngModel)]="formData.premQ2"
+                    aria-label="Yes for Premises Security Q2" />
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="prem-q2-no" class="sr-only">No</label>
+                  <input type="radio" id="prem-q2-no" name="prem-q2" value="no" [(ngModel)]="formData.premQ2"
+                    aria-label="No for Premises Security Q2" />
+                </td>
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.premQ2Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+              <tr>
+                <td class="p-2 border border-gray-300">3.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether there are appropriate security systems for :-
+                  <br />
+                  (i) access control (both into and within the premises).
+                  <br />
+                  (ii) monitoring the movements/processes within the premises.
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+
+                  <label for="prem-q3-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="prem-q3-yes" name="prem-q3" value="yes" [(ngModel)]="formData.premQ3"
+                    aria-label="Yes for Premises Security Q3" />
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="prem-q3-no" class="sr-only">No</label>
+                  <input type="radio" id="prem-q3-no" name="prem-q3" value="no" [(ngModel)]="formData.premQ3"
+                    aria-label="No for Premises Security Q3" />
+                </td>
+
+
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.premQ3Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Cargo Security
+    </h2>
+  </div>
+      <!-- Cargo Security Section -->
+
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full table-auto border border-gray-300">
+          <thead>
+            <tr class="bg-gray-200">
+              <th class="p-2 border border-gray-300 text-left">S.No.</th>
+              <th class="p-2 border border-gray-300 text-left"></th>
+              <th class="p-2 border border-gray-300 text-center">YES</th>
+              <th class="p-2 border border-gray-300 text-center">NO</th>
+              <th class="p-2 border border-gray-300 text-left">REMARK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border border-gray-300">1.</td>
+              <td class="p-2 border border-gray-300">
+                Whether goods are uniformly marked or stored in designated areas only and its integrity
+                maintained by :-
+                <br />
+                (i) restricting access to only properly identified and authorized persons.
+                <br />
+                (ii) permanent monitoring and keeping in a safe, locked area.
+                <br />
+                (iii) adequate monitoring and documentation of movement of cargo within the premises.
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q1-yes" class="sr-only">Yes</label>
+                <input type="radio" id="cargo-q1-yes" name="cargo-q1" value="yes" [(ngModel)]="formData.cargoQ1"
+                  aria-label="Yes for Cargo Security Q1" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q1-no" class="sr-only">No</label>
+                <input type="radio" id="cargo-q1-no" name="cargo-q1" value="no" [(ngModel)]="formData.cargoQ1"
+                  aria-label="No for Cargo Security Q1" />
+              </td>
+              <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.cargoQ1Remark"
+                  class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">2.</td>
+              <td class="p-2 border border-gray-300">
+                Whether all consignments are secured by the use of any high security seals/e-seals and whether
+                such seals are being maintained, distributed and checked by as an authorized personnel of the
+                company and verifiable record of the same is being maintained?
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q2-yes" class="sr-only">Yes</label>
+                <input type="radio" id="cargo-q2-yes" name="cargo-q2" value="yes" [(ngModel)]="formData.cargoQ2"
+                  aria-label="Yes for Cargo Security Q2" />
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q2-no" class="sr-only">No</label>
+                <input type="radio" id="cargo-q2-no" name="cargo-q2" value="no" [(ngModel)]="formData.cargoQ2"
+                  aria-label="No for Cargo Security Q2" />
+              </td>
+              <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.cargoQ2Remark"
+                  class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+            </tr>
+            <tr>
+              <td class="p-2 border border-gray-300">3.</td>
+              <td class="p-2 border border-gray-300">
+                Whether appropriate procedures exist to -
+                <br />
+                (i) weigh / tally the goods and compare them against transport documents, purchase/ sales
+                orders and Customs papers.
+                <br />
+                (ii) deal with situations when any discrepancies and/or irregularities are discovered.
+              </td>
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q3-yes" class="sr-only">Yes</label>
+                <input type="radio" id="cargo-q3-yes" name="cargo-q3" value="yes" [(ngModel)]="formData.cargoQ3"
+                  aria-label="Yes for Cargo Security Q3" />
+              </td>
+
+              <td class="p-2 border border-gray-300 text-center">
+                <label for="cargo-q3-no" class="sr-only">No</label>
+                <input type="radio" id="cargo-q3-no" name="cargo-q3" value="no" [(ngModel)]="formData.cargoQ3"
+                  aria-label="No for Cargo Security Q3" />
+              </td>
+              <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.cargoQ3Remark"
+                  class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Conveyance Security
+    </h2>
+  </div>
+
+    <!-- Conveyance Security Section -->
+
+    <div class="overflow-x-auto mb-4">
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-2 border border-gray-300 text-left">S.No.</th>
+            <th class="p-2 border border-gray-300 text-left"></th>
+            <th class="p-2 border border-gray-300 text-center">YES</th>
+            <th class="p-2 border border-gray-300 text-center">NO</th>
+            <th class="p-2 border border-gray-300 text-left">REMARK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border border-gray-300">1.</td>
+            <td class="p-2 border border-gray-300">
+              Whether, to the extent possible, all conveyances used for the transportation of cargo within the
+              supply chain are :-
+              <br />
+              (i) capable of being effectively secured.
+              <br />
+              (ii) driven by drivers having proper identification and training.
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="conv-q1-yes" class="sr-only">Yes</label>
+              <input type="radio" id="conv-q1-yes" name="conv-q1" value="yes" [(ngModel)]="formData.convQ1"
+                aria-label="Yes for Conveyance Security Q1" /></td>
+
+                <td class="p-2 border border-gray-300 text-center">
+              <label for="conv-q1-no" class="sr-only">No</label>
+              <input type="radio" id="conv-q1-no" name="conv-q1" value="no" [(ngModel)]="formData.convQ1"
+                aria-label="No for Conveyance Security Q1" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.convQ1Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">2.</td>
+            <td class="p-2 border border-gray-300">
+              Whether the seven-point inspection process is carried out in respect of containers before
+              stuffing of cargo therein. Also, whether potential places of concealment of illegal goods on
+              conveyances are regularly inspected (preferably under camera or verifiable record of the same
+              is maintained)?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="conv-q2-yes" class="sr-only">Yes</label>
+              <input type="radio" id="conv-q2-yes" name="conv-q2" value="yes" [(ngModel)]="formData.convQ2"
+                aria-label="Yes for Conveyance Security Q2" /></td>
+                <td class="p-2 border border-gray-300 text-center">
+              <label for="conv-q2-no" class="sr-only">No</label>
+              <input type="radio" id="conv-q2-no" name="conv-q2" value="no" [(ngModel)]="formData.convQ2"
+                aria-label="No for Conveyance Security Q2" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.convQ2Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">3.</td>
+            <td class="p-2 border border-gray-300">
+              Whether the transporters -
+              <br />
+              (i) maintain training record with respect to drivers employed.
+              <br />
+              (ii) maintain the conveyance integrity while it is en-route transporting cargo (by utilizing a
+              tracking and monitoring device or activity log/records)
+              <br />
+              (iii) notify any route delays / rerouting or any suspicious incident to the designated
+              department of the applicant company as well as to maintain records of these reports.
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="conv-q3-yes" class="sr-only">Yes</label>
+              <input type="radio" id="conv-q3-yes" name="conv-q3" value="yes" [(ngModel)]="formData.convQ3"
+                aria-label="Yes for Conveyance Security Q3" /></td>
+
+                <td class="p-2 border border-gray-300 text-center">
+
+              <label for="conv-q3-no" class="sr-only">No</label>
+              <input type="radio" id="conv-q3-no" name="conv-q3" value="no" [(ngModel)]="formData.convQ3"
+                aria-label="No for Conveyance Security Q3" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.convQ3Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Personnel Security
+    </h2>
+  </div>
+
+    <!-- Personnel Security Section -->
+
+    <div class="overflow-x-auto mb-4">
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-2 border border-gray-300 text-left">S.No.</th>
+            <th class="p-2 border border-gray-300 text-left"></th>
+            <th class="p-2 border border-gray-300 text-center">YES</th>
+            <th class="p-2 border border-gray-300 text-center">NO</th>
+            <th class="p-2 border border-gray-300 text-left">REMARK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border border-gray-300">1.</td>
+            <td class="p-2 border border-gray-300">
+              Whether all reasonable precautions are taken and background verification is done while
+              recruiting new staff to verify that they are not previously convicted of security-related,
+              Customs or other criminal offences?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q1-yes" class="sr-only">Yes</label>
+              <input type="radio" id="pers-q1-yes" name="pers-q1" value="yes" [(ngModel)]="formData.persQ1"
+                aria-label="Yes for Personnel Security Q1" />
+            </td>
+
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q1-no" class="sr-only">No</label>
+              <input type="radio" id="pers-q1-no" name="pers-q1" value="no" [(ngModel)]="formData.persQ1"
+                aria-label="No for Personnel Security Q1" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.persQ1Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">2.</td>
+            <td class="p-2 border border-gray-300">
+              Whether adequate procedures are in place :-
+              <br />
+              (i) for employee identification that require all employees to carry proper identification that
+              uniquely identifies the employee and organization.
+              <br />
+              (ii) to identify, record and deal with unauthorized or unidentified persons.
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q2-yes" class="sr-only">Yes</label>
+              <input type="radio" id="pers-q2-yes" name="pers-q2" value="yes" [(ngModel)]="formData.persQ2"
+                aria-label="Yes for Personnel Security Q2" />
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q2-no" class="sr-only">No</label>
+              <input type="radio" id="pers-q2-no" name="pers-q2" value="no" [(ngModel)]="formData.persQ2"
+                aria-label="No for Personnel Security Q2" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.persQ2Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">3.</td>
+            <td class="p-2 border border-gray-300">
+              Whether procedures are in place to expeditiously remove identification and access to premises
+              and information for employees whose employment is terminated?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q3-yes" class="sr-only">Yes</label>
+              <input type="radio" id="pers-q3-yes" name="pers-q3" value="yes" [(ngModel)]="formData.persQ3"
+                aria-label="Yes for Personnel Security Q3" /></td>
+
+                <td class="p-2 border border-gray-300 text-center">
+              <label for="pers-q3-no" class="sr-only">No</label>
+              <input type="radio" id="pers-q3-no" name="pers-q3" value="no" [(ngModel)]="formData.persQ3"
+                aria-label="No for Personnel Security Q3" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.persQ3Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Business Partner Security
+    </h2>
+  </div>
+
+        <!-- Business Partner Security Section -->
+
+        <div class="overflow-x-auto mb-4">
+          <table class="w-full table-auto border border-gray-300">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="p-2 border border-gray-300 text-left">S.No.</th>
+                <th class="p-2 border border-gray-300 text-left"></th>
+                <th class="p-2 border border-gray-300 text-center">YES</th>
+                <th class="p-2 border border-gray-300 text-center">NO</th>
+                <th class="p-2 border border-gray-300 text-left">REMARK</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-2 border border-gray-300">1.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether the applicant has an adequate vendor/business partner selection policy?
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q1-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="bp-q1-yes" name="bp-q1" value="yes" [(ngModel)]="formData.bpQ1"
+                    aria-label="Yes for Business Partner Security Q1" />
+                </td>
+
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q1-no" class="sr-only">No</label>
+                  <input type="radio" id="bp-q1-no" name="bp-q1" value="no" [(ngModel)]="formData.bpQ1"
+                    aria-label="No for Business Partner Security Q1" />
+                </td>
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.bpQ1Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+              <tr>
+                <td class="p-2 border border-gray-300">2.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether the applicant has documented proof of scope of services being rendered by the
+                  vendor/business partner, incorporating as to whether they meet relevant AEO equivalent security
+                  criteria?
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q2-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="bp-q2-yes" name="bp-q2" value="yes" [(ngModel)]="formData.bpQ2"
+                    aria-label="Yes for Business Partner Security Q2" />
+                    </td>
+
+                    <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q2-no" class="sr-only">No</label>
+                  <input type="radio" id="bp-q2-no" name="bp-q2" value="no" [(ngModel)]="formData.bpQ2"
+                    aria-label="No for Business Partner Security Q2" />
+                </td>
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.bpQ2Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+              <tr>
+                <td class="p-2 border border-gray-300">3.</td>
+                <td class="p-2 border border-gray-300">
+                  Whether a system is in place for periodic review/appraisal of business partner’s processes and
+                  facilities (based on risk assessment for maintenance of security standards by the business
+                  partners)?
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q3-yes" class="sr-only">Yes</label>
+                  <input type="radio" id="bp-q3-yes" name="bp-q3" value="yes" [(ngModel)]="formData.bpQ3"
+                    aria-label="Yes for Business Partner Security Q3" /></td>
+
+                    <td class="p-2 border border-gray-300 text-center">
+                  <label for="bp-q3-no" class="sr-only">No</label>
+                  <input type="radio" id="bp-q3-no" name="bp-q3" value="no" [(ngModel)]="formData.bpQ3"
+                    aria-label="No for Business Partner Security Q3" />
+                </td>
+                <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.bpQ3Remark"
+                    class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+  <div class="bg-gray-100 rounded-t p-2 text-center ">
+    <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Security Training and Threat Awareness
+    </h2>
+  </div>
+
+    <!-- Security Training and Threat Awareness Section -->
+
+    <div class="overflow-x-auto mb-4">
+      <table class="w-full table-auto border border-gray-300">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-2 border border-gray-300 text-left">S.No.</th>
+            <th class="p-2 border border-gray-300 text-left"></th>
+            <th class="p-2 border border-gray-300 text-center">YES</th>
+            <th class="p-2 border border-gray-300 text-center">NO</th>
+            <th class="p-2 border border-gray-300 text-left">REMARK</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-2 border border-gray-300">1.</td>
+            <td class="p-2 border border-gray-300">
+              Whether the applicant has established and maintained :-
+              <br />
+              (i) a threat awareness program to foster awareness of any threat at any point in the supply
+              chain.
+              <br />
+              (ii) adequate training programs for relevant employees with respect various aspects of security
+              (such as premises security, cargo security, conveyance security and personnel security).
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q1-yes" class="sr-only">Yes</label>
+              <input type="radio" id="train-q1-yes" name="train-q1" value="yes" [(ngModel)]="formData.trainQ1"
+                aria-label="Yes for Security Training Q1" />
+  </td>
+  <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q1-no" class="sr-only">No</label>
+              <input type="radio" id="train-q1-no" name="train-q1" value="no" [(ngModel)]="formData.trainQ1"
+                aria-label="No for Security Training Q1" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.trainQ1Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">2.</td>
+            <td class="p-2 border border-gray-300">
+              Whether employees of the applicant are aware of the procedures in place to address any
+              situation with respect to any breach in supply chain and to report/escalate the same?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q2-yes" class="sr-only">Yes</label>
+              <input type="radio" id="train-q2-yes" name="train-q2" value="yes" [(ngModel)]="formData.trainQ2"
+                aria-label="Yes for Security Training Q2" />
+                </td>
+                <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q2-no" class="sr-only">No</label>
+              <input type="radio" id="train-q2-no" name="train-q2" value="no" [(ngModel)]="formData.trainQ2"
+                aria-label="No for Security Training Q2" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.trainQ2Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+          <tr>
+            <td class="p-2 border border-gray-300">3.</td>
+            <td class="p-2 border border-gray-300">
+              Whether the records of security training are maintained and are available for verification by
+              the AEO Programme team and Indian Customs?
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q3-yes" class="sr-only">Yes</label>
+              <input type="radio" id="train-q3-yes" name="train-q3" value="yes" [(ngModel)]="formData.trainQ3"
+                aria-label="Yes for Security Training Q3" />
+                </td>
+
+                <td class="p-2 border border-gray-300 text-center">
+              <label for="train-q3-no" class="sr-only">No</label>
+              <input type="radio" id="train-q3-no" name="train-q3" value="no" [(ngModel)]="formData.trainQ3"
+                aria-label="No for Security Training Q3" />
+            </td>
+            <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.trainQ3Remark"
+                class="w-full p-1 border border-gray-300 rounded"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    </div>
+
+  <div class="text-center mb-4 py-2">
+    <p class="text-gray-600">Note: The applicant should enclose appropriate documentary evidence in support of the
+      above claims.</p>
+  </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+<app-sticky-button></app-sticky-button>

@@ -1,0 +1,232 @@
+<!-- msme-annexure.component.html -->
+
+<div class="bg-gray-100 min-h-screen mb-9">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO T1 & T2 STATUS (for MSMEs)</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">MSME Annexure – 1</h2>
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">General
+        Compliance</h2>
+      <p class="text-gray-700 text-sm mb-4">The applicant is required to provide information in this prescribed
+        format in terms of Para 3 (iv) of the Circular No. 54/2020 dated 15.12.2020.</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <div class="overflow-x-auto">
+        <p class="text-gray-700 text-sm mb-4"><span class="font-semibold">Note: </span>This form shall apply only to an applicant who has a valid MSME certificate from the lineMinistry. Further, the approved MSME must ensure their continuous MSME status during the
+          validity of its AEO certification, if granted. In case of break or revocation of the MSME
+          status, the same shall be communicated to the Pr. Commissioner, DIC within 30 days,failing
+          which, the AEO status shall be revoked and the entity shall be considered non-compliant on
+          account of wilful suppression of information for the next one year from the end of the validity
+          of its AEO certification.
+          </p>
+        <table class="w-full table-auto border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-2 border border-gray-300 text-left">S.No.</th>
+                    <th class="p-2 border border-gray-300 text-left">COMPLIANCE PARAMETER</th>
+                    <th class="p-2 border border-gray-300 text-left">DETAILS</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="p-2 border border-gray-300">1.</td>
+                    <td class="p-2 border border-gray-300">Name of Company / Economic Operator:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.name"
+                            class="max-w-full lg:w-70 block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">2.</td>
+                    <td class="p-2 border border-gray-300">Has your AEO application been rejected or your AEO status
+                        been suspended in past? If so, on what grounds (please enclose the rejection/suspension letter)
+                    </td>
+                    <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.rejectionReason"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">3 (a).</td>
+                    <td class="p-2 border border-gray-300">IEC No.:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.iecNo"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">3 (b).</td>
+                    <td class="p-2 border border-gray-300">GSTIN:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.gstin"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">3 (c).</td>
+                    <td class="p-2 border border-gray-300">MSME Certificate No.:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.msmeCertNo"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">3 (d).</td>
+                    <td class="p-2 border border-gray-300">Company Registration No. (If applicable):</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.companyRegNo"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">3 (e).</td>
+                    <td class="p-2 border border-gray-300">PAN: (Copy of the above documents to be provided)</td>
+                    <td class="p-2 border border-gray-300"><input type="file" [(ngModel)]="formData.pan"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">4.</td>
+                    <td class="p-2 border border-gray-300">Address:</td>
+                    <td class="p-2 border border-gray-300"></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">4(i).</td>
+                    <td class="p-2 border border-gray-300">Number and Street:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.addressStreet"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">4(ii).</td>
+                    <td class="p-2 border border-gray-300">Zip Code and City:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.addressCity"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300"></td>
+                    <td class="p-2 border border-gray-300">
+                        (This shall include list of sites, under control, where import / export goods are handled, e.g.
+                        packed / unpacked / loaded / unloaded / consolidated etc. in the course of supply to/from
+                        international supply chain)
+                        <br>
+                        Please provide Site Plan for all the above sites.
+                    </td>
+                    <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.siteDetails"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">5 (a).</td>
+                    <td class="p-2 border border-gray-300">Whether applicant is a manufacturer or trader</td>
+                    <td class="p-2 border border-gray-300">
+                        <select [(ngModel)]="formData.isManufacturer" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1">
+                            <option value="manufacturer">Manufacturer</option>
+                            <option value="trader">Trader</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">5 (b).</td>
+                    <td class="p-2 border border-gray-300">If applicant is a manufacturer, what are the main items of
+                        manufacturing?</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.manufacturingItems"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">5 (c).</td>
+                    <td class="p-2 border border-gray-300">The industry sector to which the applicant belongs (Eg. Auto/
+                        Pharma/ Chemicals & Plastics/ IT/ Metals/ Electronics Goods et al.)</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.industrySector"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">6 (a).</td>
+                    <td class="p-2 border border-gray-300">Contact person:*</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.contactPerson"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">6 (b).</td>
+                    <td class="p-2 border border-gray-300">Designation:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.designation"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">6 (c).</td>
+                    <td class="p-2 border border-gray-300">Contact Number:</td>
+                    <td class="p-2 border border-gray-300"><input type="text" [(ngModel)]="formData.contactNumber"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">6 (d).</td>
+                    <td class="p-2 border border-gray-300">Email address:</td>
+                    <td class="p-2 border border-gray-300"><input type="email" [(ngModel)]="formData.emailAddress"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">7 (a).</td>
+                    <td class="p-2 border border-gray-300">Major items of import and countries (in case of importer):
+                    </td>
+                    <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.importItemsCountries"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">7 (b).</td>
+                    <td class="p-2 border border-gray-300">Major items of export and countries (in case of exporter):
+                    </td>
+                    <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.exportItemsCountries"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">8.</td>
+                    <td class="p-2 border border-gray-300">No. of documents i.e. Bills of Entry or Shipping Bills
+                        filed during last financial year:</td>
+                    <td class="p-2 border border-gray-300"><input type="number" [(ngModel)]="formData.docCount"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">9.</td>
+                    <td class="p-2 border border-gray-300">Duration for which the entity has business activities
+                        preceding the date of application (in months):</td>
+                    <td class="p-2 border border-gray-300"><input type="number" [(ngModel)]="formData.businessDuration"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1" /></td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">10.</td>
+                    <td class="p-2 border border-gray-300">Provide Process Map that should illustrate the flow of goods
+                        and provide sample copy of relevant record keeping documentation (related to- sales & purchase
+                        orders, inventory management of warehouse and manufactured goods, shipping/transport document) to
+                        ascertain the complete trail and flow of goods. It should describe all the activities/ operations
+                        and role of the applicant and that of other business partners who are involved in the
+                        import-export supply chain in any manner.</td>
+                    <td class="p-2 border border-gray-300"><textarea [(ngModel)]="formData.processMap"
+                            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+<app-sticky-button></app-sticky-button>
+
+
+
+
+
+
+
+
+
+
+

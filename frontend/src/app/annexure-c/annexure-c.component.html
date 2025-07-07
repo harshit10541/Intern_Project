@@ -1,0 +1,49 @@
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO
+      STATUS</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Annexure - C</h2>
+      <h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">PROCESS MAP</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T1, AEO-T2, AEO-T3 and AEO-LO)</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+
+    <h3 class="text-lg font-bold mb-4"></h3>
+
+    <div class="mb-4">
+      <p class="text-gray-700 mb-2">
+        Process map should illustrate the flow of goods and documentation/ information from receipt of order to the point of export/delivery/receipt of the product.
+      </p>
+      <textarea class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Describe the process flow"></textarea>
+    </div>
+
+    <div class="mb-4">
+      <p class="text-gray-700 mb-2">
+        It should describe all the activities/ operations and role of the applicant and that of other business partners who are involved in the import-export supply chain in any manner.
+      </p>
+      <textarea class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Describe activities, operations, and roles"></textarea>
+    </div>
+
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="uploadDiagram">
+        Upload Process Diagram:
+      </label>
+      <input type="file" id="uploadDiagram" class="text-sm block max-w-full lg:w-80 text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none ">
+    </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+<app-sticky-button></app-sticky-button>

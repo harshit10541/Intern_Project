@@ -1,0 +1,190 @@
+
+<div class="bg-gray-100 min-h-screen">
+
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">SELF-ASSESSMENT FORM</h1>
+    <!-- <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p> -->
+  </div>
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Annexure - E.2</h2>
+<h2 class="text-xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Legal Compliance</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T1, AEO-T2, AEO-T3 and AEO-LO)</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4">
+      <!-- main content -->
+      <div class="overflow-x-auto">
+        <table class="w-full table-auto border border-gray-300">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-2 border border-gray-300 text-left">E.2</th>
+                    <th class="p-2 border border-gray-300 text-left">Compliance</th>
+                    <th class="p-2 border border-gray-300 text-center">Yes</th>
+                    <th class="p-2 border border-gray-300 text-center">No</th>
+                    <th class="p-2 border border-gray-300 text-left">Remarks</th>
+                    <th class="p-2 border border-gray-300 text-center"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="p-2 border border-gray-300">a)</td>
+                    <td class="p-2 border border-gray-300 font">
+                      <p class="font-semibold">     Whether there is any cases of infringement of Customs Laws by any of the following persons
+                        over the
+                        three financial years preceding the submission of the application:</p>
+
+
+                        (i) the applicant;
+                        <br />
+                        (ii) the person in charge of the applicant company or exercising control over its
+                        management;
+                        <br />
+                        (iii) the person responsible in the applicant company for customs matters.
+                        <br />
+                        If yes, please indicate the details of the cases. Further, submit details related to volume of
+                        the
+                        customs related operations in 'Remarks' column.
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-a-yes" class="sr-only">Yes</label>
+                        <input type="radio" id="e2-a-yes" name="e2-a" value="yes" aria-label="Yes for question E2-A"
+                            [(ngModel)]="formDataE2.a" />
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-a-no" class="sr-only">No</label>
+                        <input type="radio" id="e2-a-no" name="e2-a" value="no" aria-label="No for question E2-A"
+                            [(ngModel)]="formDataE2.a" />
+                    </td>
+                    <td class="p-2 border border-gray-300">
+                      <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                          aria-label="Remarks for question e" [(ngModel)]="formDataE2.remarksA" />
+                  </td>
+                    <td class="p-2 border border-gray-300">
+                        <label for="e2-remarks-a" class="sr-only">Remarks for question E2-A</label>
+                        <input type="file" id="e2-remarks-a" class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            aria-label="Remarks for question E2-A" [(ngModel)]="formDataE2.remarksA" />
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">b)</td>
+                    <td class="p-2 border border-gray-300">
+                        Whether any SCN has been issued during last three financial years involving fraud, forgery,
+                        outright
+                        smuggling, clandestine removal of excisable goods or cases where Service Tax has been
+                        collected from
+                        customers but not deposited to the Government.
+                        <br />
+                        If yes, please indicate the details in 'Remarks' column.
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-b-yes" class="sr-only">Yes</label>
+                        <input type="radio" id="e2-b-yes" name="e2-b" value="yes" aria-label="Yes for question E2-B"
+                            [(ngModel)]="formDataE2.b" />
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-b-no" class="sr-only">No</label>
+                        <input type="radio" id="e2-b-no" name="e2-b" value="no" aria-label="No for question E2-B"
+                            [(ngModel)]="formDataE2.b" />
+                    </td>
+                    <td class="p-2 border border-gray-300">
+                      <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                          aria-label="Remarks for question e" [(ngModel)]="formDataE2.remarksA" />
+                  </td>
+                    <td class="p-2 border border-gray-300">
+                        <label for="e2-remarks-b" class="sr-only">Remarks for question E2-B</label>
+                        <input type="file" id="e2-remarks-b" class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            aria-label="Remarks for question E2-B" [(ngModel)]="formDataE2.remarksB" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">c)</td>
+                    <td class="p-2 border border-gray-300">
+                        Whether there is any case against you wherein prosecution has been launched?
+                        <br />
+                        If yes, please indicate the details in 'Remarks' column.
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-c-yes" class="sr-only">Yes</label>
+                        <input type="radio" id="e2-c-yes" name="e2-c" value="yes" aria-label="Yes for question E2-C"
+                            [(ngModel)]="formDataE2.c" />
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center">
+                        <label for="e2-c-no" class="sr-only">No</label>
+                        <input type="radio" id="e2-c-no" name="e2-c" value="no" aria-label="No for question E2-C"
+                            [(ngModel)]="formDataE2.c" />
+                    </td>
+                    <td class="p-2 border border-gray-300">
+                      <input type="text" id="e1-remarks-e" class="w-full p-1 border border-gray-300 rounded"
+                          aria-label="Remarks for question e" [(ngModel)]="formDataE2.remarksA" />
+                  </td>
+                    <td class="p-2 border border-gray-300">
+                        <label for="e2-remarks-c" class="sr-only">Remarks for question E2-C</label>
+                        <input type="file" id="e2-remarks-c" class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            aria-label="Remarks for question E2-C" [(ngModel)]="formDataE2.remarksC" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">d)</td>
+                    <td class="p-2 border border-gray-300">
+                        i. What is the amount of disputed duty demanded or recovery of drawback paid in excess or sought to be denied, in all the SCNs issued under the Customs Act,1962 during the last three financial years?
+                        <br />
+                        ii. What is the total duty paid and drawback claimed during the preceding three financial years?
+                        <br />
+                        iii. What is the ratio of the disputed duty amount involved in the Show Cause Notices (SCNs) to the total duty paid/ drawback claimed during the preceding three years?
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center"></td>
+                    <td class="p-2 border border-gray-300 text-center"></td>
+                    <td class="p-2 border border-gray-300" colspan="2">
+                        <label for="e2-remarks-d" class="sr-only">Remarks for question E2-D</label>
+                        <textarea id="e2-remarks-d" class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            aria-label="Remarks for question E2-D" [(ngModel)]="formDataE2.remarksD"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-2 border border-gray-300">e)</td>
+                    <td class="p-2 border border-gray-300">
+                        i. Whether procedures are in place to identify and disclose any irregularities or errors to the Customs authorities or, where appropriate, other regulatory bodies? If yes, enclose evidence in support of this.
+                        <br />
+                        ii.  Whether system is in place to take appropriate remedial action when irregularities or errors are identified? If yes, enclose evidence in support of this.
+                    </td>
+                    <td class="p-2 border border-gray-300 text-center"></td>
+                    <td class="p-2 border border-gray-300 text-center"></td>
+                    <td class="p-2 border border-gray-300" colspan="2">
+                        <label for="e2-remarks-e" class="sr-only">Remarks for question E2-E</label>
+                        <textarea id="e2-remarks-e" class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                            aria-label="Remarks for question E2-E" [(ngModel)]="formDataE2.remarksE"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<app-sticky-button></app-sticky-button>

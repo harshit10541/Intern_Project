@@ -1,0 +1,437 @@
+<div class=" bg-gray-100 min-h-screen mb-20 lg:mb-10 ">
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer"
+    (click)="navigateToForm()">
+  <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
+    <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO
+      STATUS</h1>
+    <p class="text-gray-700 text-sm mb-2 text-center">(Please fill-up the annexures as may be applicable to the
+      applicant)</p>
+  </div>
+
+
+  <div class="bg-white shadow-md rounded  w-full max-w-8xl mx-auto">
+    <div class="bg-gray-200 rounded-t p-2 text-center ">
+      <h2 class="text-2xl font-extrabold text-black mb-2 text-center tracking-tight mb-2">Annexure - A</h2>
+      <p class="text-gray-700 text-sm mb-4">(applicable for grant of AEO-T1, AEO-T2, AEO-T3 and AEO-LO)</p>
+    </div>
+    <div class=" px-4 sm:px-6 lg:px-8 py-6 mb-4 ">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="companyName">
+            1. Name of Company / Economic Operator:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="companyName" type="text" placeholder="Enter Company Name">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="businessEntity">
+            2. Category of business entity:
+            <!-- <p class="text-gray-500 text-xs italic">(i.e. importer / exporter / Logistic Service Provider/ Custodian or
+            Terminal Operator/Customs Broker/ Warehouse Operator)</p> -->
+          </label>
+
+          <input list="businessEntityOptions" id="businessEntity" [(ngModel)]="selectedBusinessEntity"
+            (change)="onBusinessEntityChange($event)"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 "
+            placeholder="Enter or Select Category">
+
+          <datalist id="businessEntityOptions">
+            <option *ngFor="let option of businessEntityOptions" [value]="option">{{ option }}</option>
+          </datalist>
+
+          <p *ngIf="selectedBusinessEntity" class="mt-2 text-gray-700">
+            You have selected: {{ selectedBusinessEntity }}
+          </p>
+        </div>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-1">
+          3. Whether already ACP/AEO certified?
+        </label>
+        <p class="text-gray-500 text-xs italic mb-2">(If yes, annex copy of certificate and furnish following:)</p>
+        <div class="flex items-center mb-2">
+          <input type="radio" id="certifiedYes" name="alreadyCertified" value="yes"
+            (change)="toggleCertifiedFields(true)" class="mr-2">
+          <label for="certifiedYes" class="text-gray-700 text-sm mr-4">Yes</label>
+          <input type="radio" id="certifiedNo" name="alreadyCertified" value="no"
+            (change)="toggleCertifiedFields(false)" class="mr-2">
+          <label for="certifiedNo" class="text-gray-700 text-sm">No</label>
+        </div>
+
+
+        <div *ngIf="showCertifiedFields">
+          <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-1" for="identificationNumber">
+              a. Identification number/code:
+            </label>
+            <div class="flex flex-col sm:flex-row items-center gap-3">
+              <input
+                class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500  "
+                id="identificationNumber" type="text" placeholder="Enter Identification Number">
+
+              <!-- <label for="identificationUpload">
+                Upload File
+              </label> -->
+              <input type="file" id="identificationUpload"
+                class=" block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none "
+                (change)="onFileSelected($event)">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="mb-2">
+              <label class="block text-gray-700 text-sm font-bold mb-1" for="issuedOn">
+                b. Issued on:
+              </label>
+              <input
+                class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                id="issuedOn" type="date">
+            </div>
+            <div class="mb-2">
+              <label class="block text-gray-700 text-sm font-bold mb-1" for="validUpto">
+                c. Valid upto:
+              </label>
+              <input
+                class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                id="validUpto" type="date">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-1" for="address">
+          4. Address:
+        </label>
+        <p class="text-gray-500 text-xs italic mb-2">(If there are more than one site/location, a separate list should
+          be
+          attached for all sites/locations)</p>
+
+        <textarea *ngIf="!showSitesListUpload"
+          class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          id="address" placeholder="Enter Address" [(ngModel)]="singleAddress"></textarea>
+
+        <div *ngIf="showSitesListUpload" class="flex flex-col">
+          <label class="block text-gray-700 text-sm font-bold mb-1" for="sitesUpload">
+            Upload List of Sites:
+          </label>
+
+
+          <input type="file" id="sitesUpload"
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none "
+            (change)="onSitesFileSelected($event)">
+          <span *ngIf="uploadedSitesFile" class="text-gray-700 text-sm mt-1">
+            Selected file: {{ uploadedSitesFile.name }}
+          </span>
+        </div>
+
+        <div class="flex items-center mt-2">
+          <button type="button" (click)="toggleSitesListUpload()"
+            class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
+            {{ showSitesListUpload ? 'Enter Address Manually' : 'Upload List of Sites' }}
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+
+        <div class="mb-4 ">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="contactPerson">
+            5(a). Contact person:*
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="contactPerson" type="text" placeholder="Enter Contact Person">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="designation">
+            5(b). Designation:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="designation" type="text" placeholder="Enter Designation">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phoneNumber">
+            5(c). Phone number:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="phoneNumber" type="tel" placeholder="Enter Phone Number">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="mobileNumber">
+            5(d). Mobile No.:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="mobileNumber" type="tel" placeholder="Enter Mobile Number">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="faxNumber">
+            5(e). Fax No.:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="faxNumber" type="text" placeholder="Enter Fax Number">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="emailAddress">
+            5(f). Email address:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="emailAddress" type="email" placeholder="Enter Email Address">
+        </div>
+
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-1" for="companyRegistration">
+          6. Company registration No.:
+        </label>
+        <p class="text-gray-500 text-xs italic mb-2">(in case of companies registered under the Companies Act, 1956 and
+          / or
+          Limited Liability Partnership Act, 2008)</p>
+        <input
+          class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          id="companyRegistration" type="text" placeholder="Enter Company Registration Number">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="pan">
+          7. PAN (copy may be provided)
+        </label>
+        <div class="flex flex-col sm:flex-row items-center gap-2">
+          <input
+            class="shadow appearance-none border rounded w-full sm:w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mr-2"
+            id="pan" type="text" placeholder="Enter PAN">
+          <input type="file" id="panUpload"
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none">
+        </div>
+        <p class="text-gray-500 text-xs italic">(copy may be provided)</p>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="sitesList">
+          8. List of sites, under control, where import / export goods are handled, e.g. packed / unpacked / loaded /
+          unloaded /
+          consolidated etc. in the course of supply to/from international supply chain. Please include site address,
+          phone
+          number and contact person.
+        </label>
+
+
+        <!-- Option 1: Enter Site Details Manually -->
+        <textarea *ngIf="!showSitesUpload"
+          class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          id="sitesList" placeholder="Enter Site Details" [(ngModel)]="siteDetails"></textarea>
+
+        <!-- Option 2: Upload a Separate List -->
+        <div *ngIf="showSitesUpload" class="flex flex-col">
+          <label class="block text-gray-700 text-sm font-bold mb-1" for="sitesUpload">
+            Upload List of Sites:
+          </label>
+          <!-- <label for="sitesUpload"
+            class="">
+            Choose a file
+          </label> -->
+          <input type="file" id="sitesUpload"
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+            (change)="onSitesFileSelected($event)">
+          <span *ngIf="uploadedSitesFile" class="text-gray-700 text-sm mt-1">
+            Selected file: {{ uploadedSitesFile.name }}
+          </span>
+        </div>
+
+        <!-- Toggle Button -->
+        <button type="button" (click)="toggleSitesUpload()"
+          class="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm">
+          {{ showSitesUpload ? 'Enter Site Details Manually' : 'Upload a Separate List' }}
+        </button>
+
+
+
+      </div>
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            9(a). Major Items of import (in case of importers):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="text" placeholder="Enter Major Items of Import">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            9(b). Main countries of import (in case of importers):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="text" placeholder="Enter Main countries of Import">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            9(c). Major Items of export (in case of exporters):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="text" placeholder="Enter Major Items of Export">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            9(d). Main countries of export (in case of exporters):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="text" placeholder="Enter Main countries of Export">
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            10. Number of import documents filed during the preceding financial year (in case of importers):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="number" placeholder="Enter Number of Import Documents">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">
+            11. Number of export documents filed during the preceding financial year (in case of exporters):
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            type="number" placeholder="Enter Number of Export Documents">
+        </div>
+      </div>
+
+
+
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          12. Whether the business entity falls under the category of micro, small or medium enterprise (yes/no) (if
+          yes,
+          annex copy of evidence):
+        </label>
+
+        <div class=" flex gap-9">
+          <div
+            class="flex flex-col  items-start  space-y-2  sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4 mb-3">
+            <div class="flex items-center">
+              <input type="radio" id="micro" name="enterpriseSize" value="micro"
+                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <label for="micro" class="ml-2 text-gray-700 text-sm">Micro</label>
+            </div>
+            <div class="flex items-center">
+              <input type="radio" id="small" name="enterpriseSize" value="small"
+                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <label for="small" class="ml-2 text-gray-700 text-sm">Small</label>
+            </div>
+            <div class="flex items-center">
+              <input type="radio" id="medium" name="enterpriseSize" value="medium"
+                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <label for="medium" class="ml-2 text-gray-700 text-sm">Medium</label>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-stretch w-full sm:w-auto">
+
+            <input type="file" id="evidenceUpload"
+              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
+              (change)="onEvidenceFileSelected($event)">
+            <span *ngIf="uploadedEvidenceFile" class="text-gray-700 text-sm mt-1 text-center">
+              Selected file: {{ uploadedEvidenceFile.name }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="place">
+            Place:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="place" type="text" placeholder="Enter Place">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="date">
+            Date:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="date" type="date">
+        </div>
+      </div>
+
+
+
+      <div class="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="fullName">
+            Full Name:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="fullName" type="text" placeholder="Enter Full Name">
+        </div>
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="position">
+            Position in Company:
+          </label>
+          <input
+            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+            id="position" type="text" placeholder="Enter Position">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="signature">
+          Signature:
+        </label>
+        <input type="file" id="signatureUpload"
+          class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1">
+      </div>
+
+      <p class="text-gray-700 text-xs italic mt-4">
+        *The applicant should nominate a readily accessible central point of contact person (who should be a senior
+        management
+        official within the administration of the applicant) in order to make available to the AEO Programme Manager or
+        to
+        any
+        officer authorized by the AEO Programme Manager all the information necessary for the proving compliance with
+        the
+        requirements for issuing the AEO certificate.
+      </p>
+
+      <!-- <p class="mt-4 text-xs">
+      *************************************************************************************************
+    </p> -->
+    </div>
+
+  </div>
+
+
+
+
+</div>
+<app-sticky-button></app-sticky-button>
