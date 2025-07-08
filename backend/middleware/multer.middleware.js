@@ -8,11 +8,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Define the absolute path for the temporary uploads
-const uploadDir = path.resolve(__dirname, '../public/temp'); // Adjust path based on your project structure
+const uploadDir = path.resolve(__dirname, '../public/temp')
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        // Ensure the upload directory exists
+
         if (!fs.existsSync(uploadDir)) {
             fs.mkdirSync(uploadDir, { recursive: true });
         }

@@ -8,7 +8,7 @@ import {
 import applicationsRoutes from './applications.routes.js'
 import authRoutes from './auth.routes.js'
 import { verifyJWT } from '../middleware/auth.middleware.js'
-import annexuresRoutes from './annexures.routes.js' // Add this after `import { verifyJWT } from '../middleware/auth.middleware.js'` in file `user.routes.js`
+import annexuresRoutes from './annexures.routes.js'
 
 const router = Router()
 
@@ -25,8 +25,6 @@ router.route("/login").post(loginUser)
 router.route("/logout").post(verifyJWT, logoutUser)
 
 router.use('/api/auth', authRoutes)
-
-router.use('/api/annexures', annexuresRoutes) // Add this after `router.use('/api/auth', authRoutes)` in file `user.routes.js`
 
 router.use('/api/applications', applicationsRoutes)
 

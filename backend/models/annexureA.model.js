@@ -7,6 +7,11 @@ const AnnexureASchema = new Schema({
 		ref: 'Application',
 		// required: true,
 	},
+	// annexureId: {
+	// 	type: Schema.Types.ObjectId,
+	// 	ref: 'Application',
+	// 	// required: true,
+	// },
 
 	userId: {
 		type: Schema.Types.ObjectId,
