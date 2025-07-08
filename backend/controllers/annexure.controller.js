@@ -47,11 +47,28 @@ const handleFileUploads = (files, type) => {
             fileData.signatureFile = handleSingleFile(files.signatureFile);
         }
     } else if (type === 'b') {
-        // AnnexureB specific files (add based on your AnnexureB model)
-        // Example:
-        // if (files.someFileField) {
-        //     fileData.someFileField = handleSingleFile(files.someFileField);
-        // }
+        // AnnexureB specific files
+        if (files.proceduralSecurityFile) {
+            fileData.proceduralSecurityFile = handleSingleFile(files.proceduralSecurityFile);
+        }
+        if (files.documentSecurityFile) {
+            fileData.documentSecurityFile = handleSingleFile(files.documentSecurityFile);
+        }
+        if (files.physicalSecurityFile) {
+            fileData.physicalSecurityFile = handleSingleFile(files.physicalSecurityFile);
+        }
+        if (files.accessControlFile) {
+            fileData.accessControlFile = handleSingleFile(files.accessControlFile);
+        }
+        if (files.personnelSecurityFile) {
+            fileData.personnelSecurityFile = handleSingleFile(files.personnelSecurityFile);
+        }
+        if (files.trainingAndSkillUpgradationFile) {
+            fileData.trainingAndSkillUpgradationFile = handleSingleFile(files.trainingAndSkillUpgradationFile);
+        }
+        if (files.govtSecurityComplianceFile) {
+            fileData.govtSecurityComplianceFile = handleSingleFile(files.govtSecurityComplianceFile);
+        }
     } else if (type === 'c') {
         // AnnexureC specific files (add based on your AnnexureC model)
         // Example:
@@ -111,6 +128,106 @@ const deleteFiles = (filePaths) => {
     }
 };
 
+// New function for upsert (create or update) - specifically for annexure-a route
+const upsertAnnexure = async (req, res) => {
+    try {
+        const type = 'a'; // Fixed to 'a' for this route
+        const Model = models[type];
+
+        if (!Model) {
+            return res.status(400).json({ error: 'Invalid annexure type.' });
+        }
+
+        // Validate required fields
+        if (!req.body.applicationId) {
+            return res.status(400).json({ error: 'Application ID is required.' });
+        }
+
+        // Handle file uploads
+        const fileData = handleFileUploads(req.files, type);
+
+        // Process form data
+        const processedData = processFormData(req.body, type);
+
+        // Combine all data
+        const annexureData = {
+            ...processedData,
+            ...fileData
+        };
+
+        // Check if annexure already exists
+        const existingAnnexure = await Model.findOne({
+            applicationId: req.body.applicationId,
+            userId: req.user.id
+        });
+
+        if (existingAnnexure) {
+            // UPDATE existing annexure
+            
+            // Delete old files if new ones are uploaded
+            if (fileData.aeoCertificateFiles && fileData.aeoCertificateFiles.length > 0) {
+                deleteFiles(existingAnnexure.aeoCertificateFiles);
+            }
+            if (fileData.siteListFiles && fileData.siteListFiles.length > 0) {
+                deleteFiles(existingAnnexure.siteListFiles);
+            }
+            if (fileData.siteDetailsFiles && fileData.siteDetailsFiles.length > 0) {
+                deleteFiles(existingAnnexure.siteDetailsFiles);
+            }
+            if (fileData.panFile) {
+                deleteFiles(existingAnnexure.panFile);
+            }
+            if (fileData.enterpriseEvidenceFile) {
+                deleteFiles(existingAnnexure.enterpriseEvidenceFile);
+            }
+            if (fileData.signatureFile) {
+                deleteFiles(existingAnnexure.signatureFile);
+            }
+
+            // Update the existing annexure
+            const updatedAnnexure = await Model.findOneAndUpdate(
+                { applicationId: req.body.applicationId, userId: req.user.id },
+                { $set: annexureData },
+                { new: true, runValidators: true }
+            ).populate('applicationId', 'applicationNumber')
+             .populate('userId', 'name email');
+
+            return res.status(200).json({
+                success: true,
+                message: 'Annexure A updated successfully',
+                data: updatedAnnexure,
+                operation: 'update'
+            });
+        } else {
+            // CREATE new annexure
+            const newAnnexure = new Model({
+                ...annexureData,
+                userId: req.user.id
+            });
+
+            await newAnnexure.save();
+
+            // Populate the newly created annexure
+            const populatedAnnexure = await Model.findById(newAnnexure._id)
+                .populate('applicationId', 'applicationNumber')
+                .populate('userId', 'name email');
+
+            return res.status(201).json({
+                success: true,
+                message: 'Annexure A created successfully',
+                data: populatedAnnexure,
+                operation: 'create'
+            });
+        }
+    } catch (err) {
+        console.error('Error upserting annexure:', err);
+        res.status(500).json({
+            success: false,
+            error: err.message
+        });
+    }
+};
+
 const createAnnexure = async (req, res) => {
     try {
         const type = req.params.type.toLowerCase();
@@ -133,19 +250,17 @@ const createAnnexure = async (req, res) => {
         };
 
         // Check if annexure already exists (uncomment if needed)
-        // const exists = await Model.findOne({
-        //     applicationId: req.body.applicationId,
-        //     userId: req.user.id,
-        // });
+        const exists = await Model.findOne({
+            applicationId: req.body.applicationId,
+            userId: req.user.id,
+        });
 
-        // if (exists) {
-        //     return res.status(409).json({ error: 'Annexure already exists. Use PUT to update' });
-        // }
+        if (exists) {
+            return res.status(409).json({ error: 'Annexure already exists. Use PUT to update' });
+        }
 
         // Create new annexure
-        // const annexure = new Model({ ...annexureData, userId: req.user.id });
-        const annexure = new Model({ ...annexureData });
-        annexure.userId = req.user.id;
+        const annexure = new Model({ ...annexureData, userId: req.user.id });
         await annexure.save();
 
         res.status(201).json({
@@ -369,5 +484,6 @@ export {
     updateAnnexure,
     getAnnexure,
     getAllAnnexures,
-    deleteAnnexure
+    deleteAnnexure,
+    upsertAnnexure
 };

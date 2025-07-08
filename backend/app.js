@@ -11,10 +11,10 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 //Middleware
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN,
-//     credentials: true
-// }))
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true, limit: "16kb" }))
 app.use(cookieParser())

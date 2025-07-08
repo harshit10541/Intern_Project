@@ -1,19 +1,20 @@
 import { Router } from 'express';
-import { upload } from '../middleware/multer.middleware.js'; // Ensure correct path and filename of your multer config
-import { verifyJWT } from '../middleware/auth.middleware.js'; // Assuming you still need this for JWT verification
+import { upload } from '../middleware/multer.middleware.js';
+import { verifyJWT } from '../middleware/auth.middleware.js';
 import {
     createAnnexure,
     updateAnnexure,
     getAnnexure,
     getAllAnnexures,
-    deleteAnnexure
+    deleteAnnexure,
+    upsertAnnexure
 } from '../controllers/annexure.controller.js';
 
 const router = Router();
 
 // This middleware will dynamically configure and apply Multer's file fields
 const annexureUploadMiddleware = (req, res, next) => {
-    const type = req.params.type.toLowerCase(); // Get the annexure type from URL parameter
+    const type = req.params.type.toLowerCase();
 
     let uploadFields = [];
 
@@ -41,30 +42,25 @@ const annexureUploadMiddleware = (req, res, next) => {
         ];
     } else if (type === 'c') {
         // AnnexureC file fields (customize based on your AnnexureC model)
-        // Example:
-        // uploadFields = [
-        //     { name: 'someCFile', maxCount: 1 },
-        //     { name: 'anotherCFile', maxCount: 5 },
-        // ];
+        uploadFields = [];
     }
-    // Add more `else if` blocks for 'd', 'e', etc., as you add new annexure types
 
-    // If there are specific file fields for this annexure type,
-    // apply the Multer `fields` middleware.
+    // Apply the appropriate multer middleware
     if (uploadFields.length > 0) {
         upload.fields(uploadFields)(req, res, next);
     } else {
-        // If no specific file fields, or for an unknown type,
-        // use `upload.none()` to process text fields without expecting files.
         upload.none()(req, res, next);
     }
 };
 
+// Special route for annexure-a (create or update automatically)
+router.route('/annexure-a')
+    .post(verifyJWT, annexureUploadMiddleware, upsertAnnexure);
 
-// Routes for annexures
+// Generic routes for all annexure types
 router.route('/:type')
-    .post(verifyJWT, annexureUploadMiddleware, createAnnexure) // Apply the dynamic upload middleware
-    .put(verifyJWT, annexureUploadMiddleware, updateAnnexure); // Apply the dynamic upload middleware for updates
+    .post(verifyJWT, annexureUploadMiddleware, createAnnexure)
+    .put(verifyJWT, annexureUploadMiddleware, updateAnnexure);
 
 router.route('/:type/:applicationId')
     .get(verifyJWT, getAnnexure)
