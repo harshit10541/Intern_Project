@@ -10,7 +10,9 @@ describe('AnnexureAComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [AnnexureAComponent]
     })
-      .compileComponents();
+
+    .compileComponents();
+
 
     fixture = TestBed.createComponent(AnnexureAComponent);
     component = fixture.componentInstance;

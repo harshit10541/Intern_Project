@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import { errorHandler } from "./middleware/errorHandler.js"
+
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -21,6 +22,16 @@ app.use(cookieParser())
 // This makes files saved by Multer in './public/temp' accessible via '/public/temp/filename.ext'
 app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use(errorHandler)  // middleware
+
+const app = express()
+
+//Middleware
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
+app.use(express.json());
+app.use(errorHandler);  // middleware
 
 
 //Routes import and all defined in one place and main route in this to make it more modular

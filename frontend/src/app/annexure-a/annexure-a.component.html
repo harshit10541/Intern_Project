@@ -1,6 +1,5 @@
 <div class=" bg-gray-100 min-h-screen mb-20 lg:mb-10 ">
-  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer"
-    (click)="navigateToForm()">
+  <img src="../../assets/images/icons8-back-button-30.png" alt="back" class="justify-start cursor-pointer" (click)="navigateToForm()">
   <div class="px-4 sm:px-6 lg:px-8 py-6 mb-4 w-full max-w-3xl mx-auto border-b-2 border-orange-300">
     <h1 class="text-3xl font-extrabold text-black mb-2 text-center tracking-tight">APPLICATION FORM FOR GRANT OF AEO
       STATUS</h1>
@@ -76,9 +75,7 @@
               <!-- <label for="identificationUpload">
                 Upload File
               </label> -->
-              <input type="file" id="identificationUpload"
-                class=" block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none "
-                (change)="onFileSelected($event)">
+              <input type="file"  id="identificationUpload" class=" block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none " (change)="onFileSelected($event)">
             </div>
           </div>
 
@@ -108,8 +105,9 @@
         <label class="block text-gray-700 text-sm font-bold mb-1" for="address">
           4. Address:
         </label>
-        <p class="text-gray-500 text-xs italic mb-2">(If there are more than one site/location, a separate list should
-          be
+
+        <p class="text-gray-500 text-xs italic mb-2">(If there are more than one site/location, a separate list should be
+
           attached for all sites/locations)</p>
 
         <textarea *ngIf="!showSitesListUpload"
@@ -122,9 +120,9 @@
           </label>
 
 
-          <input type="file" id="sitesUpload"
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none "
-            (change)="onSitesFileSelected($event)">
+
+          <input type="file" id="sitesUpload" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none " (change)="onSitesFileSelected($event)">
+
           <span *ngIf="uploadedSitesFile" class="text-gray-700 text-sm mt-1">
             Selected file: {{ uploadedSitesFile.name }}
           </span>
@@ -201,8 +199,9 @@
         <label class="block text-gray-700 text-sm font-bold mb-1" for="companyRegistration">
           6. Company registration No.:
         </label>
-        <p class="text-gray-500 text-xs italic mb-2">(in case of companies registered under the Companies Act, 1956 and
-          / or
+
+        <p class="text-gray-500 text-xs italic mb-2">(in case of companies registered under the Companies Act, 1956 and / or
+
           Limited Liability Partnership Act, 2008)</p>
         <input
           class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -247,9 +246,9 @@
             class="">
             Choose a file
           </label> -->
-          <input type="file" id="sitesUpload"
-            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
-            (change)="onSitesFileSelected($event)">
+
+          <input type="file" id="sitesUpload" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none" (change)="onSitesFileSelected($event)">
+
           <span *ngIf="uploadedSitesFile" class="text-gray-700 text-sm mt-1">
             Selected file: {{ uploadedSitesFile.name }}
           </span>
@@ -332,30 +331,31 @@
         </label>
 
         <div class=" flex gap-9">
-          <div
-            class="flex flex-col  items-start  space-y-2  sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4 mb-3">
+
+          <div class="flex flex-col  items-start  space-y-2  sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4 mb-3">
             <div class="flex items-center">
-              <input type="radio" id="micro" name="enterpriseSize" value="micro"
-                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <input type="radio" id="micro" name="enterpriseSize" value="micro" class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500"
+                [(ngModel)]="selectedEnterpriseSize">
               <label for="micro" class="ml-2 text-gray-700 text-sm">Micro</label>
             </div>
             <div class="flex items-center">
-              <input type="radio" id="small" name="enterpriseSize" value="small"
-                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <input type="radio" id="small" name="enterpriseSize" value="small" class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500"
+                [(ngModel)]="selectedEnterpriseSize">
               <label for="small" class="ml-2 text-gray-700 text-sm">Small</label>
             </div>
             <div class="flex items-center">
-              <input type="radio" id="medium" name="enterpriseSize" value="medium"
-                class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500" [(ngModel)]="selectedEnterpriseSize">
+              <input type="radio" id="medium" name="enterpriseSize" value="medium" class="form-radio h-4 w-4 text-blue-600 focus:ring-blue-500"
+                [(ngModel)]="selectedEnterpriseSize">
+
               <label for="medium" class="ml-2 text-gray-700 text-sm">Medium</label>
             </div>
           </div>
 
           <div class="flex flex-col items-stretch w-full sm:w-auto">
 
-            <input type="file" id="evidenceUpload"
-              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none"
-              (change)="onEvidenceFileSelected($event)">
+
+            <input type="file" id="evidenceUpload" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none" (change)="onEvidenceFileSelected($event)">
+
             <span *ngIf="uploadedEvidenceFile" class="text-gray-700 text-sm mt-1 text-center">
               Selected file: {{ uploadedEvidenceFile.name }}
             </span>
@@ -363,25 +363,27 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="place">
-            Place:
-          </label>
-          <input
-            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-            id="place" type="text" placeholder="Enter Place">
-        </div>
 
-        <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="date">
-            Date:
-          </label>
-          <input
-            class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-            id="date" type="date">
-        </div>
-      </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="place">
+      Place:
+    </label>
+    <input
+      class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+      id="place" type="text" placeholder="Enter Place">
+  </div>
+
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="date">
+      Date:
+    </label>
+    <input
+      class="form-input mt-1 block w-full text-sm rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+      id="date" type="date">
+  </div>
+</div>
+
 
 
 
@@ -408,8 +410,9 @@
         <label class="block text-gray-700 text-sm font-bold mb-2" for="signature">
           Signature:
         </label>
-        <input type="file" id="signatureUpload"
-          class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1">
+
+        <input type="file" id="signatureUpload" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-nonemb-1">
+
       </div>
 
       <p class="text-gray-700 text-xs italic mt-4">
@@ -434,4 +437,6 @@
 
 
 </div>
+
 <app-sticky-button></app-sticky-button>
+

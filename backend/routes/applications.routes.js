@@ -5,6 +5,7 @@ import {
     updateApplication
 } from '../controllers/application.controller.js'
 
+
 const router = Router();
 
 router.route('/').post(createApplication)

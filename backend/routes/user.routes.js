@@ -4,11 +4,11 @@ import {
     loginUser,
     logoutUser
 } from '../controllers/user.controller.js'
-
 import applicationsRoutes from './applications.routes.js'
 import authRoutes from './auth.routes.js'
 import { verifyJWT } from '../middleware/auth.middleware.js'
 import annexuresRoutes from './annexures.routes.js'
+
 
 const router = Router()
 

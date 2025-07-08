@@ -28,5 +28,4 @@ router.route('/:type/:annexureId')
     .put(verifyJWT, annexureUploadMiddleware, updateAnnexure)
 
 router.route('/all/:type').get(verifyJWT, getAllAnnexures)
-
 export default router;
