@@ -3,7 +3,8 @@ import {
     getApplication,
     createApplication,
     updateApplication
-} from '../controllers/applicationController.js'
+} from '../controllers/application.controller.js'
+
 
 const router = Router();
 

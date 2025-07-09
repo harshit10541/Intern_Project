@@ -3,13 +3,33 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser'
 import { errorHandler } from "./middleware/errorHandler.js"
 
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const app = express()
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+//Middleware
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true, limit: "16kb" }))
+app.use(cookieParser())
+// This makes files saved by Multer in './public/temp' accessible via '/public/temp/filename.ext'
+app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use(errorHandler)  // middleware
+
 const app = express()
 
 //Middleware
-// app.use(cors({
-//     origin: process.env.CORS_ORIGIN,
-//     credentials: true
-// }))
+app.use(cors({
+    origin: process.env.CORS_ORIGIN,
+    credentials: true
+}))
 app.use(express.json());
 app.use(errorHandler);  // middleware
 

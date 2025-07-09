@@ -21,7 +21,6 @@ const generateAccessAndRefreshTokens = async (userId) => {
     }
 }
 
-// || !confirm_password
 const registerUser = asyncHandler(async (req, res) => {
     // get user details from frontend
     const { fullname, email, password, mobile_number, company_name } = req.body
