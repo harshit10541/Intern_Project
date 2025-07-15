@@ -22,7 +22,7 @@ const router = Router();
 router.route('/:type')
     .post(verifyJWT, annexureUploadMiddleware, createAnnexure)
 
-router.route('/:type/:annexureId')
+router.route('/:type')
     .get(verifyJWT, getAnnexure)
     .delete(verifyJWT, deleteAnnexure)
     .put(verifyJWT, annexureUploadMiddleware, updateAnnexure)

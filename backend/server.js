@@ -1,8 +1,6 @@
 import dotenv from 'dotenv'
 import connectDB from './db/index.db.js'
 
-import express from 'express'
-
 import { app } from './app.js'
 import { v2 as cloudinary } from 'cloudinary'
 import fs from 'fs'

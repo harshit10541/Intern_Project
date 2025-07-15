@@ -6,13 +6,13 @@ const AnnexureBSchema = new mongoose.Schema({
   applicationId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Application',
-    required: true,
+    // required: true,
   },
 
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    // required: true,
   },
 
   applicationType: {
