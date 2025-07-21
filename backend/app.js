@@ -51,7 +51,7 @@ app.get('/api/v1/application/:type', (req, res) =>{
     const st = req.params.type;
 
     res.json(mp[st])
-})
+});
 
 // app.get('/', (req, res) =>{
 //     res.json("Get all");

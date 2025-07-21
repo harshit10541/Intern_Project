@@ -2,11 +2,6 @@ import { Schema, model } from 'mongoose';
 import mongoose from 'mongoose';
 
 const AnnexureCSchema = new mongoose.Schema({
-  applicationId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Application',
-    // required: true,
-  },
 
   userId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -14,11 +9,11 @@ const AnnexureCSchema = new mongoose.Schema({
     // required: true,
   },
 
-  applicationType: {
-    type: String,
-    enum: ['T1', 'T2', 'T3', 'LO'],
-    required: true,
-  },
+  // applicationType: {
+  //   type: String,
+  //   enum: ['T1', 'T2', 'T3', 'LO'],
+  //   required: true,
+  // },
 
   processFlowDescription: {
     type: String,

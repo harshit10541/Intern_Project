@@ -2,11 +2,11 @@ import { Schema, model } from 'mongoose';
 import mongoose from 'mongoose';
 
 const AnnexureASchema = new Schema({
-	applicationId: {
-		type: Schema.Types.ObjectId,
-		ref: 'Application',
-		// required: true,
-	},
+	// applicationId: {
+	// 	type: Schema.Types.ObjectId,
+	// 	ref: 'Application',
+	// 	// required: true,
+	// },
 	// annexureId: {
 	// 	type: Schema.Types.ObjectId,
 	// 	ref: 'Application',
@@ -19,11 +19,11 @@ const AnnexureASchema = new Schema({
 		// required: true,
 	},
 
-	applicationType: {
-		type: String,
-		enum: ['T1', 'T2', 'T3', 'LO', 'MSME'],
-		required: true,
-	},
+	// applicationType: {
+	// 	type: String,
+	// 	enum: ['T1', 'T2', 'T3', 'LO', 'MSME'],
+	// 	required: true,
+	// },
 
 	companyName: String,
 	businessCategory: String,

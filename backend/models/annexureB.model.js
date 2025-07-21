@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 
 const AnnexureBSchema = new mongoose.Schema({
 
-  applicationId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Application',
-    // required: true,
-  },
+  // applicationId: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'Application',
+  //   // required: true,
+  // },
 
   userId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -15,11 +15,11 @@ const AnnexureBSchema = new mongoose.Schema({
     // required: true,
   },
 
-  applicationType: {
-    type: String,
-    enum: ['T2', 'T3', 'LO'],
-    required: true,
-  },
+  // applicationType: {
+  //   type: String,
+  //   enum: ['T2', 'T3', 'LO'],
+  //   required: true,
+  // },
 
   proceduralSecurityFile: String,
   documentSecurityFile: String,
